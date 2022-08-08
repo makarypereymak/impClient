@@ -1,0 +1,46 @@
+.law-block {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .law-block {
+    padding: 50px;
+  }
+}
+
+.law-text {
+  font-size: 17px;
+}
+
+@media (min-width: 1200px) {
+  .law-text {
+    font-size: 25px;
+    margin: 40px 0 40px 0;
+  }
+}
+
+.law-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.law-item {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+  .law-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+
+.law-item::first-letter {
+  font-weight: bold;
+}

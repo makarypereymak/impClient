@@ -1,0 +1,63 @@
+.nav__toggle {
+  border: none;
+  background-color: inherit;
+  margin-top: 12px;
+  padding-left: 1.25em;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__toggle-global {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 3px solid #3c4758;
+  width: 100%;
+  transition: 0.55s;
+}
+
+.nav--closed .nav__toggle-top {
+  top: 0;
+}
+
+.nav--closed .nav__toggle-middle1 {
+  top: 10px;
+}
+
+.nav--closed .nav__toggle-middle2 {
+  top: 20px;
+}
+
+.nav--closed .nav__toggle-bottom {
+  top: 30px;
+}
+
+.nav--opened .nav__toggle-top {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(50deg);
+  transition: 0.55s 0.5s;
+}
+
+.nav--opened .nav__toggle-middle1 {
+  opacity: 0;
+}
+
+.nav--opened .nav__toggle-middle2 {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(-410deg);
+  transition: 0.55s 0.5s;
+}
+
+.nav--opened .nav__toggle-bottom {
+  opacity: 0;
+}
+
+@media (min-width: 1200px) {
+  .nav--closed  .nav__toggle,
+  .nav--opened  .nav__toggle  {
+    display: none;
+  }
+}

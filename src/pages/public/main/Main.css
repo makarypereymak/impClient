@@ -1,0 +1,36 @@
+.main {
+  padding: 20px;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding: 50px;
+  }
+}
+
+.main__title {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .main__title {
+    font-size: 30px;
+    margin-bottom: 70px;
+  }
+
+  .main__title br {
+    display: none;
+  }
+}
+
+
+.main__text {
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .main__text {
+    font-size: 21px;
+  }
+}
