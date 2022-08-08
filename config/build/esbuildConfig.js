@@ -7,6 +7,7 @@ ESbuild.build({
   entryNames: "bundle",
   bundle: true,
   loader: {
+    ".js": "jsx",
     ".png": "file",
     ".jpeg": "file",
     ".jfif": "file",

@@ -1,3 +1,4 @@
+import React from "react";
 import Main from "../pages/public/main/Main";
 import Equipments from "../pages/public/equipments/Equipments";
 import Services from "../pages/public/services/Services";
