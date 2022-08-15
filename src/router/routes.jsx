@@ -63,7 +63,7 @@ export const PUBLIC_ROUTES = [
     path: "/vacancies",
     exact: true,
     element: <Vacancies />,
-    textLink: "Вакансии",
+    textLink: "Трудоустройство",
   },
   {
     path: "/contacts",

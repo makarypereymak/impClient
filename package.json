@@ -12,8 +12,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.7",
+    "sass": "^1.54.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,6 +41,11 @@
     ]
   },
   "devDependencies": {
-    "esbuild": "^0.14.49"
+    "autoprefixer": "^10.4.8",
+    "esbuild": "^0.14.49",
+    "esbuild-sass-plugin": "^2.3.2",
+    "postcss": "^8.4.16",
+    "stylelint": "^14.9.1",
+    "stylelint-config-htmlacademy": "^0.1.12"
   }
 }

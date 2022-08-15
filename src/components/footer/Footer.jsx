@@ -1,6 +1,7 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import FooterNavList from "../footerNavList/FooterNavList";
+import Social from "../social/Social";
 
 function Footer() {
   return (
@@ -38,6 +39,7 @@ function Footer() {
       </section>
       <div className="footer__map" id="map"></div>
       <FooterNavList />
+      <Social />
     </footer>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Admin.css";
+import "./Admin.scss";
 
 function AdminMain() {
   return <div className="admin">AdminMain</div>;

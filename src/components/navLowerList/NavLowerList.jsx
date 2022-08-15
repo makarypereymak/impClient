@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import "./NavLowerList.css";
-// import { HashLink } from "react-router-hash-link";
+import "./NavLowerList.scss";
 import { Link } from "react-router-dom";
-import { openUl } from "../../components/servicesList/ServicesList";
 
 function NavLowerList(props) {
   const lowerList = useRef(null);
@@ -30,13 +28,13 @@ function NavLowerList(props) {
       ) : null}
       <ul ref={lowerList} className={props.startClassName}>
         {props.list.lowerLavelLinks.map((routeLower) => (
-          <li className="nav__lower-list-item" key={routeLower.id}>
+          <li
+            className={"nav__lower-list-item " + props.modifier}
+            key={routeLower.id}
+          >
             <Link
               className="nav__lower-list-link"
-              onClick={() => {
-                openUl(routeLower.id);
-              }}
-              to={props.list.path + "#" + routeLower.idName}
+              to={{ pathname: props.list.path, hash: "#" + routeLower.idName }}
             >
               {routeLower.text}
             </Link>

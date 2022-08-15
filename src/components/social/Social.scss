@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 660px) {
+    padding-top: 50px;
+  }
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__item--whats {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 4px;
+  justify-content: center;
+  background-color: #2f3842;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.social__link {
+  display: block;
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+  fill: #2f3842;
+  border-radius: 8px;
+
+  &--whats {
+    background-color: #2f3842;
+    width: 20px;
+    height: 20px;
+  }
+}

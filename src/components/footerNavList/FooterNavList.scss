@@ -1,0 +1,22 @@
+.footer__nav {
+  padding: 50px 20px 50px 20px;
+
+  @media (min-width: 660px) {
+    display: none;
+  }
+}
+
+.footer__nav-list {
+  text-align: center;
+}
+
+.footer__nav-item {
+  margin-bottom: 22px;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: #2f3842;
+  font-weight: bold;
+  text-transform: uppercase;
+}

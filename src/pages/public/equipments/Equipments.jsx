@@ -1,5 +1,6 @@
 import React from "react";
-import "./Equipments.css";
+import "./Equipments.scss";
+import Logo from "../../../assets/images/logo.png";
 
 function Equipments() {
   const equipments = [
@@ -7,25 +8,25 @@ function Equipments() {
       id: 1,
       name: "Название",
       description: "Описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 2,
       name: "Название",
       description: "Описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 3,
       name: "Название",
       description: "Описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 4,
       name: "Название",
       description: "Описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
   ];
   return (

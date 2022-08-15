@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutCompany.css";
+import "./AboutCompany.scss";
 
 function AboutCompany() {
   return <div>AboutCompany</div>;

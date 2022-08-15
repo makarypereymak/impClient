@@ -1,5 +1,5 @@
 import React from "react";
-import "./FooterNavList.css";
+import "./FooterNavList.scss";
 import { Link } from "react-router-dom";
 import { PUBLIC_ROUTES } from "../../router/routes";
 import NavLowerList from "../../components/navLowerList/NavLowerList";
@@ -17,6 +17,7 @@ function FooterNavList() {
                 </Link>
                 {route.lowerLavelLinks ? (
                   <NavLowerList
+                    modifier={""}
                     list={route}
                     buttonExist={false}
                     startClassName={"nav__lower-list nav__lower-list--opened"}

@@ -1,5 +1,6 @@
 import React from "react";
-import "./Workers.css";
+import "./Workers.scss";
+import Logo from "../../../assets/images/logo.png";
 
 function Workers() {
   const workers = [
@@ -7,25 +8,25 @@ function Workers() {
       id: 1,
       name: "имя",
       description: "описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 2,
       name: "имя",
       description: "описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 3,
       name: "имя",
       description: "описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
     {
       id: 4,
       name: "имя",
       description: "описание",
-      src: "./images/logo.png",
+      src: Logo,
     },
   ];
   return (

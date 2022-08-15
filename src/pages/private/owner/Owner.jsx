@@ -1,5 +1,5 @@
 import React from "react";
-import "./Owner.css";
+import "./Owner.scss";
 
 function Owner() {
   return <div className="owner">Owner</div>;

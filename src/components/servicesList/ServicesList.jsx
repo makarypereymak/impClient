@@ -1,5 +1,5 @@
 import React from "react";
-import "./ServicesList.css";
+import "./ServicesList.scss";
 import { UL_SERVICES } from "../../data/dataServices";
 
 export const openUl = (id) => {

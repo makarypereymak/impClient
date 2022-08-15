@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Main.css";
+import "./Main.scss";
 // import Modal from "../../../components/modal/Modal";
 import CompanyGroup from "../../../components/companyGroup/CompanyGroup";
 
@@ -12,14 +12,8 @@ function Main() {
   return (
     <div>
       {/* <Modal /> */}
-      <main className="main">
+      <div className="main">
         <CompanyGroup />
-        {/* <h1 className="main__title">
-          Общество с ограниченной ответственностью Частная охранная организация
-          Профессионал <br /> сервис <br />
-          секьюрити <br />
-          (ООО ЧОО «ПСС»)
-        </h1> */}
         <p className="main__text">
           Наша компания представляет собой реструктурированное в 2010 году
           частное охранное предприятие ООО «Защита КПД», осуществлявшее свою
@@ -61,7 +55,7 @@ function Main() {
           противопожарных систем и систем видеонаблюдения, и подготовлены для
           работы на современном оборудовании систем обеспечения безопасности.
         </p>
-      </main>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./Login.scss";
 import axios from "axios";
 import state from "../../../store/store";
 import { observer } from "mobx-react-lite";

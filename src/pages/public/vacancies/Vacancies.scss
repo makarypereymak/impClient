@@ -1,0 +1,28 @@
+.vacancies {
+  padding: 20px;
+
+  @media (min-width: 1200px) {
+    padding: 50px;
+  }
+}
+
+.vacancies__list {
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+.vacancies__text {
+  font-size: 17px;
+
+  @media (min-width: 1200px) {
+    font-size: 25px;
+  }
+}
+
+.vacancies__list-item {
+  font-size: 15px;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+}

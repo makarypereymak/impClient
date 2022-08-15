@@ -1,5 +1,5 @@
 import React from "react";
-import "./LawBlock.css";
+import "./LawBlock.scss";
 import { OL_SERVICES } from "../../data/dataServices";
 
 function LawBlock() {

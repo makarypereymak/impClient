@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBarHight.css";
+import "./NavBarHight.scss";
 import { Link } from "react-router-dom";
 
 function NavBarHight(props) {

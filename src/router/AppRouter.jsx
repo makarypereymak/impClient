@@ -11,16 +11,32 @@ const AppRouter = () => {
     <>
       {state.role === "user" ? (
         <Layout>
-          <Routes>
-            {PUBLIC_ROUTES.map((route) => (
-              <Route
-                path={route.path}
-                exact={route.exact}
-                element={route.element}
-                key={route.path}
-              />
-            ))}
-          </Routes>
+          <main>
+            <Routes>
+              {PUBLIC_ROUTES.map((route) => {
+                if (route.lowerLavelLinks) {
+                  route.lowerLavelLinks.map((lowerRoute) => {
+                    return (
+                      <Route
+                        path={route.path + "#" + lowerRoute.idName}
+                        exact={route.exact}
+                        element={route.element}
+                        key={lowerRoute.id}
+                      />
+                    );
+                  });
+                }
+                return (
+                  <Route
+                    path={route.path}
+                    exact={route.exact}
+                    element={route.element}
+                    key={route.path}
+                  />
+                );
+              })}
+            </Routes>
+          </main>
         </Layout>
       ) : null}
       {state.role === "admin" ? (
