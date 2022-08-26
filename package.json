@@ -20,6 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "node ./config/build/esbuildConfig.js",
+    "stylelint": "stylelint \"**/*.scss\" --custom-syntax postcss-scss",
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -45,7 +46,13 @@
     "esbuild": "^0.14.49",
     "esbuild-sass-plugin": "^2.3.2",
     "postcss": "^8.4.16",
-    "stylelint": "^14.9.1",
-    "stylelint-config-htmlacademy": "^0.1.12"
+    "postcss-scss": "^4.0.4",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0"
   }
 }

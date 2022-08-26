@@ -1,20 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Main.scss";
-// import Modal from "../../../components/modal/Modal";
 import CompanyGroup from "../../../components/companyGroup/CompanyGroup";
+import OurClients from "../../../components/ourClients/OurClients";
+import Certificates from "../../../components/certificates/Certificates";
+import Security from "../../../components/securityBlock/Security";
 
 function Main() {
-  // useEffect(() => {
-  //   const body = document.querySelector("#body");
-  //   body.style.overflowY = "hidden";
-  // });
-
   return (
     <div>
-      {/* <Modal /> */}
       <div className="main">
         <CompanyGroup />
-        <p className="main__text">
+        {/* <p className="main__text">
           Наша компания представляет собой реструктурированное в 2010 году
           частное охранное предприятие ООО «Защита КПД», осуществлявшее свою
           деятельность на рынке охранных услуг с 2003 года до проведения его
@@ -54,8 +50,11 @@ function Main() {
           Сотрудники проходят специальные тренинги по эксплуатации охранных,
           противопожарных систем и систем видеонаблюдения, и подготовлены для
           работы на современном оборудовании систем обеспечения безопасности.
-        </p>
+        </p> */}
       </div>
+      <OurClients />
+      <Certificates />
+      <Security />
     </div>
   );
 }

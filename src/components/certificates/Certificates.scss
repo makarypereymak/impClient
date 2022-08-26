@@ -1,0 +1,22 @@
+.certificates__text {
+  color: #000000;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.certificates__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.certificates__pic {
+  width: 100px;
+
+  @media (min-width: 1200px) {
+    width: 259px;
+  }
+}

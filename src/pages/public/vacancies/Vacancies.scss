@@ -1,4 +1,7 @@
-.vacancies {
+.vacancies__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
 
   @media (min-width: 1200px) {
@@ -6,9 +9,17 @@
   }
 }
 
+.vacancies__wrapper-for-phone {
+  align-self: center;
+}
+
+.vacancies__title {
+  margin-top: 50px;
+}
+
 .vacancies__list {
-  list-style-type: disc;
   padding-left: 16px;
+  list-style-type: disc;
 }
 
 .vacancies__text {

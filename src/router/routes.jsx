@@ -2,26 +2,42 @@ import React from "react";
 import Main from "../pages/public/main/Main";
 import Equipments from "../pages/public/equipments/Equipments";
 import Services from "../pages/public/services/Services";
-import Workers from "../pages/public/workers/Workers";
 import Login from "../pages/public/login/Login";
 import AdminMain from "../pages/private/admin/AdminMain";
 import Owner from "../pages/private/owner/Owner";
 import Vacancies from "../pages/public/vacancies/Vacancies";
 import Contacts from "../pages/public/contacts/Contacts";
-import AboutCompany from "../pages/public/aboutCompany/AboutCompany";
 
 export const PUBLIC_ROUTES = [
-  { path: "", exact: true, element: <Main />, textLink: null },
   {
-    path: "/equipments",
+    path: "",
     exact: true,
-    element: <Equipments />,
-    textLink: "Оборудование",
+    element: <Main />,
+    modifier: "main",
+    textLink: "Главная",
+    lowerLavelLinks: [
+      {
+        id: 0,
+        idName: "certificates",
+        text: "Лицензии",
+      },
+      {
+        id: 1,
+        idName: "sacurity",
+        text: "Охрана",
+      },
+      {
+        id: 2,
+        idName: "callback",
+        text: "Обратный звонок",
+      },
+    ],
   },
   {
     path: "/services",
     exact: true,
     element: <Services />,
+    modifier: "services",
     textLink: "Услуги",
     lowerLavelLinks: [
       {
@@ -47,28 +63,31 @@ export const PUBLIC_ROUTES = [
     ],
   },
   {
-    path: "/workers",
+    path: "/equipments",
     exact: true,
-    element: <Workers />,
-    textLink: "Сотрудники",
+    element: <Equipments />,
+    modifier: "equipments",
+    textLink: "Оборудование",
   },
-  { path: "/login", exact: true, element: <Login />, textLink: null },
   {
-    path: "/aboutCompany",
+    path: "/login",
     exact: true,
-    element: <AboutCompany />,
-    textLink: "О компании",
+    element: <Login />,
+    idName: "",
+    textLink: null,
   },
   {
     path: "/vacancies",
     exact: true,
     element: <Vacancies />,
+    modifier: "vacancies",
     textLink: "Трудоустройство",
   },
   {
     path: "/contacts",
     exact: true,
     element: <Contacts />,
+    modifier: "contacts",
     textLink: "Контакты",
   },
 ];

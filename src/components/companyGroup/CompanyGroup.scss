@@ -1,46 +1,55 @@
 .company-group {
   position: relative;
-  padding-bottom: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 35px;
 }
 
 .company-group__title {
-  font-size: 18px;
+  display: none;
 
   @media (min-width: 1200px) {
+    min-width: 700px;
+    min-height: 316px;
+    margin-top: 41px;
+    margin-bottom: 0;
+    padding-top: 34px;
+    color: #ffffff;
+    font-weight: 400;
     font-size: 28px;
+    font-family: "Century", "Arial", serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url("../../assets/images/wreath.png");
+    background-repeat: no-repeat;
+    background-position-y: -119px;
+    background-size: contain;
   }
 }
 
-.company-group__block {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto min-content;
-  width: 200px;
-  gap: 39px;
-  background-size: 188px 130px;
-  background-color: inherit;
-  background-position-x: 33px;
-  padding: 0 18px;
-  margin-left: -18px;
+.company-group__list {
+  display: flex;
+  flex-direction: column;
   height: 180px;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/images/group.svg");
+  margin-top: 39px;
+  padding: 0 18px;
 
   @media (min-width: 1200px) {
     width: 433px;
+    min-width: 534px;
     height: 293px;
-    background-size: 336px 183px;
-    background-position-x: 54px;
+    margin-top: -123px;
   }
+}
+
+.company-group__item {
+  display: flex;
 }
 
 .company-group__link {
   display: block;
-  grid-row: 2/3;
 }
 
 .company-group__logo {
@@ -53,25 +62,13 @@
   }
 }
 
-.company-group__company {
-  padding: 2px;
-  border: 1px solid #000000;
-  display: block;
-  border-radius: 50%;
-  grid-row: 2/3;
+.company-group__company-label {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 7px;
+  text-align: center;
 
-  &--ES {
-    width: 25px;
-    height: 25px;
-  }
-
-  &--ESS {
-    width: 35px;
-    height: 25px;
-  }
-
-  &--ETE {
-    width: 35px;
-    height: 25px;
+  @media (min-width: 1200px) {
+    font-size: 20px;
   }
 }

@@ -1,0 +1,38 @@
+.contacts-block {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.contacts-block__wrapper-for-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-block__contact-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+
+  &--telephone {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+  }
+}
+
+.contacts-block__info-block {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-block__contact-info {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.contacts-block__sprite {
+  display: none;
+}

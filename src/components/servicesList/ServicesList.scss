@@ -1,10 +1,10 @@
 .services {
-  background-color: #f2f2f2;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f2f2f2;
 
   @media (min-width: 1200px) {
     padding: 50px;
@@ -15,8 +15,8 @@
   font-size: 23px;
 
   @media (min-width: 1200px) {
+    margin: 0 0 30px;
     font-size: 30px;
-    margin: 0 0 30px 0;
   }
 }
 
@@ -30,19 +30,19 @@
 }
 
 .services-item__button {
-  transform: rotate(45deg);
-  display: inline;
   position: relative;
+  display: inline;
   width: 13px;
   height: 13px;
-  border: none;
-  background-color: inherit;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/images/plus.svg");
-  border-radius: 50px;
   margin-right: 5px;
-  transition-duration: 500ms;
+  background-color: inherit;
+  background-image: url("../../assets/images/plus.svg");
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50px;
+  transform: rotate(45deg);
   cursor: pointer;
+  transition-duration: 500ms;
 
   @media (min-width: 1200px) {
     width: 20px;
@@ -56,12 +56,12 @@
 }
 
 .services-item__title {
+  display: inline;
+  margin: 0;
+  font-weight: normal;
   font-size: 14px;
   line-height: 13px;
-  margin: 0;
-  display: inline;
   vertical-align: bottom;
-  font-weight: normal;
 
   @media (min-width: 1200px) {
     vertical-align: sub;
@@ -73,11 +73,11 @@
 }
 
 .services-item__lower-list--list-show {
+  display: block;
   max-width: 700px;
   margin-top: 20px;
-  list-style-type: disc;
   padding-left: 20px;
-  display: block;
+  list-style-type: disc;
   transition-duration: 1s;
   transition-property: display;
 }

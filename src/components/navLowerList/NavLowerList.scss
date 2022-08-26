@@ -1,35 +1,23 @@
+@import "../../variables.scss";
+
 .nav__lower-list--closed {
   display: none;
 }
 
-@keyframes item {
-  from {
-    left: -337px;
-    display: none;
-  }
-
-  to {
-    left: 3px;
-  }
-}
-
-.nav__lower-list--opened {
-  display: block;
-}
-
 .nav__open-lower-list {
-  padding-top: 2px;
-  color: #3c4758;
+  position: absolute;
   top: 13px;
   right: 34%;
-  position: absolute;
+  padding-top: 2px;
+  color: #ffffff;
+  font-size: 10px;
+  background-color: inherit;
   border: none;
   cursor: pointer;
-  background-color: inherit;
 
   @media (min-width: 1200px) {
-    padding-top: 4px;
     position: static;
+    padding-top: 4px;
   }
 }
 
@@ -40,12 +28,12 @@
   animation-timing-function: linear;
   animation-iteration-count: 1;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     position: static;
     display: flex;
     align-items: center;
-    min-height: 65px;
     box-sizing: border-box;
+    min-height: 65px;
   }
 }
 
@@ -58,20 +46,20 @@
 }
 
 .nav__lower-list-item--header {
-  box-shadow: 0 -6px 7px -7px rgb(60, 71, 88);
   background-color: rgba(60, 71, 88, 0.09);
+  box-shadow: 0 -6px 7px -7px rgb(60, 71, 88);
 }
 
 .nav__lower-list-link {
-  text-decoration: none;
-  color: #2f3842;
   display: block;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
   min-height: 30px;
-  font-size: 14px;
   padding: 5px 0;
-  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .footer__nav-item .nav__lower-list-item {
@@ -79,5 +67,27 @@
 }
 
 .footer__nav-item .nav__lower-list--opened {
-  padding: 25px 0 35px 0;
+  padding: 25px 0 35px;
+}
+
+////
+
+.nav__lower-list--opened {
+  position: absolute;
+  bottom: -262px;
+  left: 0;
+  display: block;
+  background-color: rgba(54, 109, 161, 1);
+}
+
+.nav__lower-list--opened .nav__lower-list-item--header {
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 15px 25px;
+  background-color: rgba(54, 109, 161, 1);
+  box-shadow: inset 0 -5px 11px -7px rgb(60 71 88);
+}
+
+.nav__lower-list--opened .nav__lower-list-link {
+  font-size: 20px;
 }

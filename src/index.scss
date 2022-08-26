@@ -1,23 +1,48 @@
 @font-face {
+  font-weight: 400;
   font-family: "EncodeSans-Regular";
   font-style: normal;
   src: url("./assets/fonts/encode-sans-regular.ttf");
   font-display: swap;
 }
 
-body {
-  font-family: "EncodeSans-Regular", "Arial", sans-serif;
-  color: #2f3842;
+@font-face {
+  font-weight: 400;
+  font-family: "Century";
   font-style: normal;
+  src: url("./assets/fonts/Century.TTF");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-display: swap;
+}
+
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   overflow-x: hidden;
+  color: #2f3842;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
 }
 
 main {
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 ul {
@@ -26,13 +51,30 @@ ul {
   list-style-type: none;
 }
 
-#root {
+.title--blue {
+  width: max-content;
+  min-width: 50px;
   margin: 0;
-  padding: 0;
+  margin-bottom: 15px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 7px;
+  text-decoration: none;
+  background-color: rgb(54 109 161 / 70%);
+
+  @media (min-width: 1200px) {
+    min-width: 340px;
+    font-size: 20px;
+  }
+}
+
+#root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -40,10 +82,10 @@ ul {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }

@@ -26,17 +26,55 @@ function Social() {
   ];
 
   return (
-    <>
-      <svg>
+    <div className="social">
+      <svg className="social__sprite">
         <symbol
-          viewBox="0 0 16 16"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48 48"
           id="inst"
         >
+          <radialGradient
+            id="yOrnnhliCrdS2gy~4tD8ma"
+            cx="19.38"
+            cy="42.035"
+            r="44.899"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#fd5" />
+            <stop offset=".328" stop-color="#ff543f" />
+            <stop offset=".348" stop-color="#fc5245" />
+            <stop offset=".504" stop-color="#e64771" />
+            <stop offset=".643" stop-color="#d53e91" />
+            <stop offset=".761" stop-color="#cc39a4" />
+            <stop offset=".841" stop-color="#c837ab" />
+          </radialGradient>
           <path
-            d="M14.7 1.3C13.8 0.4 12.7 0 11.3 0H4.7C1.9 0 0 1.9 0 4.7V11.3C0 12.7 0.4 13.9 1.4 14.7C2.3 15.6 3.4 16 4.7 16H11.3C12.7 16 13.9 15.6 14.7 14.7C15.5 13.8 16 12.7 16 11.3V4.7C16 3.3 15.6 2.1 14.7 1.3ZM8 12.1C5.8 12.1 3.9 10.3 3.9 8C3.9 5.7 5.8 3.9 8 3.9C10.2 3.9 12.1 5.7 12.1 8C12.1 10.3 10.2 12.1 8 12.1ZM12.6 4.7C11.9 4.7 11.3 4.2 11.3 3.4C11.3 2.6 11.8 2.1 12.6 2.1C13.3 2.1 13.9 2.7 13.9 3.4C13.9 4.1 13.3 4.7 12.6 4.7Z"
-            fill="#2f3842"
+            fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+          />
+          <radialGradient
+            id="yOrnnhliCrdS2gy~4tD8mb"
+            cx="11.786"
+            cy="5.54"
+            r="29.813"
+            gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#4168c9" />
+            <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+          </radialGradient>
+          <path
+            fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+          />
+          <path
+            fill="#fff"
+            d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+          />
+          <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+          <path
+            fill="#fff"
+            d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
           />
         </symbol>
 
@@ -50,7 +88,7 @@ function Social() {
             d="M16.7 16.7c-2.2 2.27-2.36 5.1-2.55 11.3 5.78 0 9.77-.02 11.83-2.02 2-2.06 2.02-6.24 2.02-11.83-6.2.2-9.03.35-11.3 2.55M0 14.15c0 5.59.02 9.77 2.02 11.83 2.06 2 6.05 2.02 11.83 2.02-.2-6.2-.35-9.03-2.55-11.3-2.27-2.2-5.1-2.36-11.3-2.55M13.85 0C8.08 0 4.08.02 2.02 2.02.02 4.08 0 8.26 0 13.85c6.2-.2 9.03-.35 11.3-2.55 2.2-2.27 2.36-5.1 2.55-11.3m2.85 11.3C14.5 9.03 14.34 6.2 14.15 0c5.78 0 9.77.02 11.83 2.02 2 2.06 2.02 6.24 2.02 11.83-6.2-.2-9.03-.35-11.3-2.55"
           ></path>
           <path
-            fill="#fff"
+            fill="rgba(255, 255, 255, 0)"
             d="M28 14.15v-.3c-6.2-.2-9.03-.35-11.3-2.55-2.2-2.27-2.36-5.1-2.55-11.3h-.3c-.2 6.2-.35 9.03-2.55 11.3-2.27 2.2-5.1 2.36-11.3 2.55v.3c6.2.2 9.03.35 11.3 2.55 2.2 2.27 2.36 5.1 2.55 11.3h.3c.2-6.2.35-9.03 2.55-11.3 2.27-2.2 5.1-2.36 11.3-2.55"
           ></path>
         </symbol>
@@ -129,9 +167,12 @@ function Social() {
           </g>
         </symbol>
       </svg>
-      <ul className="social">
+      <ul className="social__list">
         {socialList.map((item) => (
-          <li className={"social__item social__item--" + item.name}>
+          <li
+            key={item.name}
+            className={"social__item social__item--" + item.name}
+          >
             <a
               href={item.link}
               className={"social__link social__link--" + item.name}
@@ -143,7 +184,7 @@ function Social() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

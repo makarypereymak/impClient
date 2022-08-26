@@ -1,11 +1,7 @@
-.social {
+.social__list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-
-  @media (min-width: 660px) {
-    padding-top: 50px;
-  }
+  justify-content: center;
 }
 
 .social__item {
@@ -14,13 +10,13 @@
 
 .social__item--whats {
   display: flex;
-  box-sizing: border-box;
-  padding-top: 4px;
   justify-content: center;
-  background-color: #2f3842;
-  border-radius: 8px;
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
+  padding-top: 4px;
+  background-color: rgb(49, 216, 49);
+  border-radius: 36px;
 }
 
 .social__link {
@@ -30,12 +26,31 @@
 .social__icon {
   width: 30px;
   height: 30px;
-  fill: #2f3842;
-  border-radius: 8px;
+  border-radius: 36px;
 
   &--whats {
-    background-color: #2f3842;
     width: 20px;
     height: 20px;
+    background-color: rgb(49, 216, 49);
   }
+
+  &--telegram {
+    background-color: #ffffff;
+    fill: rgb(42, 165, 223);
+  }
+
+  &--vk {
+    background-color: #ffffff;
+    outline: 1px solid rgb(15, 110, 154);
+    fill: rgb(15, 110, 154);
+  }
+
+  &--inst {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
+  }
+}
+
+.social__sprite {
+  display: none;
 }

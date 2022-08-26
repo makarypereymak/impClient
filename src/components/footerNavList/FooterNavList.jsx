@@ -11,7 +11,10 @@ function FooterNavList() {
         {PUBLIC_ROUTES.map((route) => {
           if (route.textLink !== null) {
             return (
-              <li key={route.path} className="footer__nav-item">
+              <li
+                key={route.path}
+                className={`footer__nav-item footer__nav-item--${route.modifier}`}
+              >
                 <Link className="footer__nav-link" to={route.path}>
                   {route.textLink}
                 </Link>

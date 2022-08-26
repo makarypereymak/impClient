@@ -1,9 +1,9 @@
 .law-block {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 
   @media (min-width: 1200px) {
     padding: 50px;
@@ -14,15 +14,15 @@
   font-size: 17px;
 
   @media (min-width: 1200px) {
+    margin: 40px 0;
     font-size: 25px;
-    margin: 40px 0 40px 0;
   }
 }
 
 .law-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .law-item {

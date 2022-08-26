@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import NavButton from "../navButton/NavButton";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import { PUBLIC_ROUTES } from "../../router/routes";
@@ -54,10 +53,7 @@ function Header() {
             {PUBLIC_ROUTES.map((route) => {
               if (route.textLink !== null) {
                 return (
-                  <li
-                    key={route.path}
-                    className="nav__item nav__item--1 square-1"
-                  >
+                  <li key={route.path} className="nav__item">
                     <Link
                       onClick={() => {
                         listenerForLink();
@@ -84,10 +80,6 @@ function Header() {
               }
             })}
           </ul>
-          <NavButton nav={nav}></NavButton>
-          <a className="nav__contact-phone" href="tel:+78632107858">
-            8 (863) 210-78-58
-          </a>
         </nav>
       </div>
     </header>

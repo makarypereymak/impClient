@@ -1,8 +1,16 @@
 .main {
+  margin-top: -28px;
   padding: 20px;
+  background-image: url("../../../assets/images/background-main.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -27px;
+  background-size: cover;
 
   @media (min-width: 1200px) {
-    padding: 50px;
+    margin-top: -41px;
+    padding: 0 50px;
+    background-position-y: -110px;
   }
 }
 
@@ -11,8 +19,8 @@
   text-align: center;
 
   @media (min-width: 1200px) {
-    font-size: 30px;
     margin-bottom: 70px;
+    font-size: 30px;
 
     .main__title br {
       display: none;

@@ -1,39 +1,53 @@
-.equipments {
-  margin: 0 auto;
-  padding: 20px;
+.equipments__wrapper-for-photo {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 800px;
-  border-bottom: 1px solid #000000;
+  margin: 50px;
+}
 
-  @media (min-width: 1200px) {
-    padding: 50px 0;
-    gap: 40px;
+@keyframes opacity {
+  70% {
+    opacity: 0.75;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  90% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
-.equipments__item {
-  width: 280px;
-  min-height: 340px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
-}
-
 .equipments__pic {
-  width: 280px;
-  margin: 0 0 10px 0;
-}
+  display: block;
+  width: 50%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  animation-name: opacity;
+  animation-iteration-count: infinite;
 
-.equipments__title {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-}
+  &--1 {
+    background-image: url("../../../assets/images/forEquipments/eq1.jpg");
+    animation-duration: 4000ms;
+  }
 
-.equipments__description {
-  margin: 0;
-  font-size: 16px;
+  &--2 {
+    background-image: url("../../../assets/images/forEquipments/eq2.jpg");
+    animation-duration: 5000ms;
+  }
+
+  &--3 {
+    background-image: url("../../../assets/images/forEquipments/eq3.jpg");
+    animation-duration: 4000ms;
+  }
+
+  &--4 {
+    background-image: url("../../../assets/images/forEquipments/eq4.jpg");
+    animation-duration: 5000ms;
+  }
 }

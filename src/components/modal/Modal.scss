@@ -1,14 +1,14 @@
 .modal {
-  width: 100%;
-  height: 100vh;
-  opacity: 1;
-  background-color: #ffffff;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   top: 0;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 1;
 
   &--down-animation {
     opacity: 0;
@@ -57,11 +57,11 @@
 }
 
 .modal__tagline {
-  font-style: italic;
-  font-family: "EncodeSans-Regular", serif;
-  font-size: 21px;
-  font-weight: bold;
   display: block;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: "EncodeSans-Regular", "Arial", serif;
+  font-style: italic;
   text-align: center;
 
   .modal__tagline {
