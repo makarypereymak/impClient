@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .law-block {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   justify-content: center;
   padding: 20px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     padding: 50px;
   }
 }
@@ -13,7 +15,7 @@
 .law-text {
   font-size: 17px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     margin: 40px 0;
     font-size: 25px;
   }
@@ -33,7 +35,7 @@
     font-weight: bold;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     margin-bottom: 15px;
     font-size: 20px;
   }

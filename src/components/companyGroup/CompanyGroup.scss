@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .company-group {
   position: relative;
   display: flex;
@@ -5,12 +7,17 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 35px;
+
+  @media (min-width: $small-desktop-width) {
+    padding-bottom: 128px;
+  }
 }
 
 .company-group__title {
   display: none;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
+    display: block;
     min-width: 700px;
     min-height: 316px;
     margin-top: 41px;
@@ -18,7 +25,7 @@
     padding-top: 34px;
     color: #ffffff;
     font-weight: 400;
-    font-size: 28px;
+    font-size: var(--desktop-title-font-size);
     font-family: "Century", "Arial", serif;
     text-align: center;
     text-transform: uppercase;
@@ -36,7 +43,7 @@
   margin-top: 39px;
   padding: 0 18px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     width: 433px;
     min-width: 534px;
     height: 293px;
@@ -52,12 +59,16 @@
   display: block;
 }
 
-.company-group__logo {
-  width: 50px;
-  height: 50px;
+.company-group__link:hover {
+  opacity: 0.5;
+}
 
-  @media (min-width: 1200px) {
-    width: 100px;
+.company-group__logo {
+  width: 62px;
+  height: 45px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 130px;
     height: 100px;
   }
 }
@@ -65,10 +76,10 @@
 .company-group__company-label {
   color: #ffffff;
   font-weight: 400;
-  font-size: 7px;
+  font-size: var(--mobile-text-font-size);
   text-align: center;
 
-  @media (min-width: 1200px) {
-    font-size: 20px;
+  @media (min-width: $small-desktop-width) {
+    font-size: var(--desktop-text-font-size);
   }
 }

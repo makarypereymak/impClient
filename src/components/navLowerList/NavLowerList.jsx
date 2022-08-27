@@ -7,25 +7,6 @@ function NavLowerList(props) {
 
   return (
     <>
-      {props.buttonExist ? (
-        <button
-          onClick={() => {
-            if (
-              lowerList.current.className ===
-              "nav__lower-list nav__lower-list--closed"
-            ) {
-              lowerList.current.className =
-                "nav__lower-list nav__lower-list--opened";
-            } else {
-              lowerList.current.className =
-                "nav__lower-list nav__lower-list--closed";
-            }
-          }}
-          className="nav__open-lower-list"
-        >
-          &gt;
-        </button>
-      ) : null}
       <ul ref={lowerList} className={props.startClassName}>
         {props.list.lowerLavelLinks.map((routeLower) => (
           <li

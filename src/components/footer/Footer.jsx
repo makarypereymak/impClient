@@ -4,6 +4,7 @@ import FooterNavList from "../footerNavList/FooterNavList";
 import Social from "../social/Social";
 import ContactsBlock from "../contactsBlock/ContactsBlock";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -12,13 +13,15 @@ function Footer() {
       <FooterNavList />
       <div className="footer__wrapper-for-lower-lavel">
         <div className="footer__wrapper-for-logo">
-          <img
-            className="footer__logo"
-            src={logo}
-            width="50"
-            height="50"
-            alt="Логотип компании."
-          />
+          <Link to="/">
+            <img
+              className="footer__logo"
+              src={logo}
+              width="50"
+              height="50"
+              alt="Логотип компании."
+            />
+          </Link>
           <p className="footer__copyright">©2022 группа компаний</p>
         </div>
         <Social />

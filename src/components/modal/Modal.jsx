@@ -1,31 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "./Modal.scss";
 
-function Modal() {
-  useEffect(() => {
-    setTimeout(() => {
-      const modal = document.querySelector(".modal");
-      if (modal) {
-        modal.className = "modal modal--down-animation";
-        setTimeout(() => {
-          modal.className = "modal modal--down-display";
-        }, 1000);
-        const body = document.querySelector("#body");
-        body.style.overflowY = "auto";
-      }
-    }, 2500);
-  });
+function Modal(props) {
+  const [number, setNumber] = useState("");
 
   return (
-    <div className="modal">
-      <span className="modal__tagline">
-        Доверьте свою безопасность профессионалам!
-      </span>
-      <h1 className="modal__title">
-        Профессионал <br /> сервис <br />
-        секьюрити <br />
-        (ООО ЧОО «ПСС»)
-      </h1>
+    <div
+      className={props.visible ? "modal--show" : "modal--hidden"}
+      onClick={() => props.setVisible(false)}
+    >
+      <div className="modal__form-wrapper" onClick={(e) => e.stopPropagation()}>
+        <p className="modal__title">Введите ваш номер телефона</p>
+        <form
+          className="modal__form"
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <input
+            onInput={(e) => {
+              setNumber(e.target.value);
+            }}
+            className="modal__input"
+            type="number"
+          />
+          <button
+            type="button"
+            onClick={() => {
+              // sendMail(number);
+            }}
+          ></button>
+        </form>
+      </div>
     </div>
   );
 }

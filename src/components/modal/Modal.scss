@@ -1,4 +1,10 @@
-.modal {
+@import "../../variables.scss";
+
+.modal--hidden {
+  display: none;
+}
+
+.modal--show {
   position: fixed;
   top: 0;
   z-index: 2;
@@ -7,47 +13,15 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
   opacity: 1;
-
-  &--down-animation {
-    opacity: 0;
-    animation-name: modal;
-    animation-duration: 1000ms;
-  }
-
-  &--down-display {
-    display: none;
-  }
-}
-
-@keyframes modal {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0.75;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.25;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 .modal__title {
   font-size: 20px;
   text-align: center;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     font-size: 40px;
 
     .modal__title br {
@@ -56,15 +30,13 @@
   }
 }
 
-.modal__tagline {
-  display: block;
-  font-weight: bold;
-  font-size: 21px;
-  font-family: "EncodeSans-Regular", "Arial", serif;
-  font-style: italic;
-  text-align: center;
-
-  .modal__tagline {
-    font-size: 30px;
-  }
+.modal__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #ffffff;
 }

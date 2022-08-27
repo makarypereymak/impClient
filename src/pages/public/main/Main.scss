@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .main {
   margin-top: -28px;
   padding: 20px;
@@ -7,9 +9,9 @@
   background-position-y: -27px;
   background-size: cover;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     margin-top: -41px;
-    padding: 0 50px;
+    padding: 0 50px 40px 50px;
     background-position-y: -110px;
   }
 }
@@ -18,7 +20,7 @@
   font-size: 20px;
   text-align: center;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     margin-bottom: 70px;
     font-size: 30px;
 
@@ -31,7 +33,7 @@
 .main__text {
   font-size: 16px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $small-desktop-width) {
     font-size: 21px;
   }
 }

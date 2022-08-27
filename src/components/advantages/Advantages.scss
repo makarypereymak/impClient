@@ -3,6 +3,9 @@
 .advantages {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 70px auto;
   column-gap: 30px;
 
   @media (max-width: $mobile-width-only) {

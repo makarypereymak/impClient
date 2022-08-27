@@ -67,6 +67,7 @@ function Contacts() {
             8(928) 554-54-55
           </a>
         </div>
+        <div className="contacts__vk-group" id="vk_groups"></div>
       </div>
     </div>
   );
