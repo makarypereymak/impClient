@@ -15,6 +15,7 @@ ESbuild.build({
     ".png": "file",
     ".svg": "file",
     ".ttf": "file",
+    ".TTF": "file",
   },
   plugins: [
     sassPlugin({

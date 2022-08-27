@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "gulp build",
+    "build": "node ./config/build/esbuildConfig.js",
     "stylelint": "stylelint \"**/*.scss\" --custom-syntax postcss-scss",
     "test": "react-scripts test"
   },
@@ -40,7 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "type": "module",
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "babel-plugin-transform-react-jsx": "^6.24.1",
