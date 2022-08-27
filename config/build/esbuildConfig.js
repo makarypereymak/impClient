@@ -11,6 +11,7 @@ ESbuild.build({
   bundle: true,
   loader: {
     ".jpg": "file",
+    ".jfif": "file",
     ".png": "file",
     ".svg": "file",
     ".ttf": "file",
