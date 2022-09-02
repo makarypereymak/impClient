@@ -10,7 +10,7 @@ import cer32 from "../../assets/images/certificates/cer-3-2.jpg";
 import cer41 from "../../assets/images/certificates/cer-4-1.jpg";
 import cer42 from "../../assets/images/certificates/cer-4-2.jpg";
 
-function Certificates() {
+function Certificates(props) {
   const CERTIFICATES = [
     cer11,
     cer12,
@@ -23,15 +23,15 @@ function Certificates() {
     cer2,
   ];
   return (
-    <div className="certificates">
+    <div className="certificates" id={props.id}>
       <h1 className="certificates__title title--blue">Лицензии</h1>
       <p className="certificates__text">
         Компания ООО ЧОП ИМПЕРИУМ ДЕЙСТВУЕТ НА <br />
         ОСНОВАНИИ ВЫДАННОЙ ЛИЦЕНЗИИ
       </p>
       <ul className="certificates__list">
-        {CERTIFICATES.map((cer) => (
-          <li className="certificates__item">
+        {CERTIFICATES.map((cer, index) => (
+          <li key={index} className="certificates__item">
             <img className="certificates__pic" src={cer} alt="Лицензия." />
           </li>
         ))}

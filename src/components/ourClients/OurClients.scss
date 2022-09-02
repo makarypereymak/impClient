@@ -1,54 +1,5 @@
 @import "../../variables.scss";
 
-.our-clients {
-  padding: 15px 0;
-}
-
-.our-clients__list {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 13px;
-  background-color: #afc5d9;
-  border-radius: 39px;
-
-  @media (min-width: $small-desktop-width) {
-    background-color: inherit;
-  }
-}
-
-.our-clients__slider {
-  display: flex;
-  justify-content: space-around;
-}
-
-.our-clients__button {
-  display: inline-block;
-  padding: 10px;
-  background-color: inherit;
-  background-image: url("../../assets/images/arrow-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-
-  &--next {
-    transform: rotate(-180deg);
-  }
-
-  @media (min-width: $small-desktop-width) {
-    padding: 40px;
-    background-image: url("../../assets/images/arrow-desktop.svg");
-
-    &--next {
-      transform: none;
-    }
-
-    &--back {
-      transform: rotate(180deg);
-    }
-  }
-}
-
 .our-clients__pic {
   max-width: 70px;
   max-height: 36px;
@@ -56,6 +7,18 @@
   @media (min-width: $small-desktop-width) {
     max-width: 300px;
     max-height: 150px;
+  }
+}
+
+.our-clients__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 36px;
+
+  @media (min-width: $small-desktop-width) {
+    height: 150px;
   }
 }
 
@@ -70,16 +33,4 @@
     width: 300px;
     height: 150px;
   }
-}
-
-.our-clients__item--hidden {
-  display: none;
-}
-
-.our-clients__button:disabled {
-  opacity: 0.5;
-}
-
-.our-clients__button--next:disabled {
-  opacity: 0.5;
 }

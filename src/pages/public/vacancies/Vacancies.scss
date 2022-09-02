@@ -1,5 +1,9 @@
 @import "../../../variables.scss";
 
+.vacancies {
+  margin-top: 50px;
+}
+
 .vacancies__main-wrapper {
   display: flex;
   flex-direction: column;
@@ -15,13 +19,8 @@
   align-self: center;
 }
 
-.vacancies__title {
-  margin-top: 50px;
-}
-
 .vacancies__list {
   padding-left: 16px;
-  list-style-type: disc;
 }
 
 .vacancies__text {
@@ -33,9 +32,22 @@
 }
 
 .vacancies__list-item {
+  position: relative;
   font-size: 15px;
 
   @media (min-width: $small-desktop-width) {
     font-size: 20px;
   }
+}
+
+.vacancies__list-item::before {
+  position: absolute;
+  top: 6px;
+  left: -27px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
 }

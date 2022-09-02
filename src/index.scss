@@ -55,14 +55,18 @@ ul {
 
 .title--blue {
   width: max-content;
-  min-width: 50px;
   margin: 0;
   margin-bottom: 15px;
   padding: 10px;
   color: #ffffff;
   font-size: var(--mobile-title-font-size);
+  text-transform: uppercase;
   text-decoration: none;
   background-color: rgb(54 109 161 / 70%);
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 170px;
+  }
 
   @media (min-width: $small-desktop-width) {
     min-width: 340px;

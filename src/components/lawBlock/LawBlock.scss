@@ -24,19 +24,29 @@
 .law-list {
   margin: 0;
   padding: 0;
+  padding-left: 23px;
   list-style-type: none;
 }
 
 .law-item {
+  position: relative;
   margin-bottom: 5px;
   font-size: 15px;
-
-  &::first-letter {
-    font-weight: bold;
-  }
 
   @media (min-width: $small-desktop-width) {
     margin-bottom: 15px;
     font-size: 20px;
   }
+}
+
+.law-item::before {
+  position: absolute;
+  top: 6px;
+  left: -27px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
 }

@@ -1,19 +1,24 @@
 @import "../../variables.scss";
 
-.services {
+.services-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f2f2f2;
 
   @media (min-width: $small-desktop-width) {
     padding: 50px;
   }
 }
 
-.services-title {
+.services-block__list {
+  @media (min-width: $small-desktop-width) {
+    margin-left: 131px;
+  }
+}
+
+.services-block__title {
   font-size: 23px;
 
   @media (min-width: $small-desktop-width) {
@@ -22,7 +27,8 @@
   }
 }
 
-.services-item {
+.services-block__item {
+  position: relative;
   margin-bottom: 30px;
   font-size: 15px;
 
@@ -31,18 +37,44 @@
   }
 }
 
-.services-item__button {
+.services-block__item::before {
+  position: absolute;
+  left: -131px;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  content: "";
+}
+
+#physical::before {
+  background-image: url("../../assets/images/services/camera.jpg");
+}
+
+#escort::before {
+  background-image: url("../../assets/images/services/home.jpg");
+}
+
+#personal::before {
+  background-image: url("../../assets/images/services/gun.jpg");
+}
+
+#development::before {
+  background-image: url("../../assets/images/services/home-plus.jpg");
+}
+
+.services-block__item-button {
   position: relative;
   display: inline;
   width: 13px;
   height: 13px;
   margin-right: 5px;
   background-color: inherit;
-  background-image: url("../../assets/images/plus.svg");
+  background-image: url("../../assets/images/plus-blue.png");
   background-repeat: no-repeat;
+  background-size: 22px 22px;
   border: none;
   border-radius: 50px;
-  transform: rotate(45deg);
   cursor: pointer;
   transition-duration: 500ms;
 
@@ -52,12 +84,12 @@
   }
 }
 
-.services-item__button--click {
+.services-block__item-button--click {
   transform: rotate(90deg);
   transition-duration: 500ms;
 }
 
-.services-item__title {
+.services-block__item-title {
   display: inline;
   margin: 0;
   font-weight: normal;
@@ -66,20 +98,37 @@
   vertical-align: bottom;
 
   @media (min-width: $small-desktop-width) {
+    font-size: 17px;
+    line-height: 67px;
     vertical-align: sub;
   }
 }
 
-.services-item__lower-list--list-hidden {
+.services-block__item-lower-list--list-hidden {
   display: none;
 }
 
-.services-item__lower-list--list-show {
+.services-block__item-lower-list--list-show {
   display: block;
   max-width: 700px;
   margin-top: 20px;
   padding-left: 20px;
-  list-style-type: disc;
   transition-duration: 1s;
   transition-property: display;
+}
+
+.services-block__item-lower-list--list-show li {
+  position: relative;
+}
+
+.services-block__item-lower-list--list-show li::before {
+  position: absolute;
+  top: 6px;
+  left: -27px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
 }

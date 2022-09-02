@@ -4,9 +4,9 @@ import securityBack from "../../assets/images/security-back.jpg";
 import securityMan from "../../assets/images/security-man.jpg";
 import Advantages from "../advantages/Advantages";
 
-function Security() {
+function Security(props) {
   return (
-    <div className="security">
+    <div className="security" id={props.id}>
       <h1 className="security__title title--blue">Охрана</h1>
       <div className="security__main-wrapper">
         <img

@@ -1,14 +1,8 @@
-.contacts {
-  display: flex;
-  margin-top: 61px;
-  margin-bottom: 61px;
-}
+@import "../../../variables.scss";
 
-.contacts h1 {
-  min-width: 215px;
-  height: 26px;
-  text-align: center;
-  text-transform: uppercase;
+.contacts {
+  margin-top: 50px;
+  margin-bottom: 61px;
 }
 
 .contacts__wrapper-for-info {
@@ -16,8 +10,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   justify-items: center;
-  margin-top: 75px;
-  margin-left: 126px;
+  margin-top: 20px;
+  padding: 10px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 800px;
+    margin: 75px auto 0 auto;
+    padding: 0;
+  }
 }
 
 .contacts__info-block {
@@ -56,21 +56,33 @@
 
 .contacts__label {
   color: #868686;
-  font-size: 30px;
+  font-size: 15px;
   text-transform: uppercase;
+
+  @media (min-width: $small-desktop-width) {
+    font-size: 30px;
+  }
 }
 
 .contacts__label-for-human {
   max-width: 396px;
   color: #868686;
-  font-size: 27px;
+  font-size: 13px;
+
+  @media (min-width: $small-desktop-width) {
+    font-size: 27px;
+  }
 }
 
 .contacts__dirname,
 .contacts__contact-info {
   color: #000000;
-  font-size: 24px;
+  font-size: 12px;
   text-decoration: none;
+
+  @media (min-width: $small-desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .contacts__contact-info {

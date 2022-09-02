@@ -9,13 +9,13 @@ function LawBlock() {
         В перечень услуг, регламентируемых ст. 3 ФЗ «О частной детективной и
         охранной деятельности в РФ», входят:
       </p>
-      <ol className="law-list">
+      <ul className="law-list">
         {OL_SERVICES.map((item, index) => (
           <li key={index} className="law-item">
             {item}
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./Services.scss";
 import ServicesList from "../../../components/servicesList/ServicesList";
 import LawBlock from "../../../components/lawBlock/LawBlock";
 import { useLocation } from "react-router-dom";
@@ -30,7 +31,8 @@ function Services() {
   }, [location]);
 
   return (
-    <div>
+    <div className="services">
+      <h1 className="services__title title--blue">Услуги</h1>
       <LawBlock />
       <ServicesList />
     </div>

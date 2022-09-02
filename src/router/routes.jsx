@@ -10,7 +10,7 @@ import Contacts from "../pages/public/contacts/Contacts";
 
 export const PUBLIC_ROUTES = [
   {
-    path: "",
+    path: "/",
     exact: true,
     element: <Main />,
     modifier: "main",
@@ -23,7 +23,7 @@ export const PUBLIC_ROUTES = [
       },
       {
         id: 1,
-        idName: "sacurity",
+        idName: "security",
         text: "Охрана",
       },
       {

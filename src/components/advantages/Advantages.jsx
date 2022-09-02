@@ -5,16 +5,29 @@ function Advantages() {
   return (
     <ul className="advantages">
       <li className="advantages__item">
-        <span>20 лет на рынке</span>
+        <span className="adventages__text adventages__text--big">18</span>
+        <span className="adventages__text adventages__text--small">
+          лет на рынке
+        </span>
       </li>
       <li className="advantages__item">
-        <span>1000 Сотрудников в штате</span>
+        <span className="adventages__text adventages__text--big">24</span>
+        <span className="adventages__text adventages__text--small">
+          часа в сутки
+        </span>
       </li>
       <li className="advantages__item">
-        <span>100$ bucks in ur ass</span>
+        <span className="adventages__text adventages__text--big">400</span>
+        <span className="adventages__text adventages__text--small">
+          сотрудников
+        </span>
       </li>
       <li className="advantages__item">
-        <span>200 лет друидам</span>
+        <span className="adventages__text adventages__text--small">более</span>
+        <span className="adventages__text adventages__text--big">600</span>
+        <span className="adventages__text adventages__text--small">
+          довольных клиентов
+        </span>
       </li>
     </ul>
   );
