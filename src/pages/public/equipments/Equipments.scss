@@ -17,51 +17,6 @@
   }
 }
 
-@keyframes opacity {
-  70% {
-    opacity: 0.75;
-  }
-
-  80% {
-    opacity: 0.5;
-  }
-
-  90% {
-    opacity: 0.25;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.equipments__pic {
-  display: block;
-  width: 50%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-  animation-name: opacity;
-  animation-iteration-count: infinite;
-
-  &--1 {
-    background-image: url("../../../assets/images/forEquipments/eq1.jpg");
-    animation-duration: 4000ms;
-  }
-
-  &--2 {
-    background-image: url("../../../assets/images/forEquipments/eq2.jpg");
-    animation-duration: 5000ms;
-  }
-
-  &--3 {
-    background-image: url("../../../assets/images/forEquipments/eq3.jpg");
-    animation-duration: 4000ms;
-  }
-
-  &--4 {
-    background-image: url("../../../assets/images/forEquipments/eq4.jpg");
-    animation-duration: 5000ms;
-  }
+.equipments__slider-wrapper {
+  display: flex;
 }

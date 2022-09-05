@@ -18,7 +18,7 @@ function Header() {
             alt="Логотип сайта."
           />
         </Link>
-        <nav className="nav nav--closed">
+        <nav className="nav">
           <ul className="nav__list">
             {PUBLIC_ROUTES.map((route) => {
               if (route.textLink !== null) {

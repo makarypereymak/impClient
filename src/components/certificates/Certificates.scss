@@ -7,16 +7,12 @@
   text-align: center;
 }
 
-.certificates__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 0;
+.certificates__item {
+  padding: 0 20px;
 }
 
 .certificates__pic {
-  width: 100px;
+  width: 170px;
 
   @media (min-width: $small-desktop-width) {
     width: 259px;

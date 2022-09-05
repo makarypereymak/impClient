@@ -4,20 +4,21 @@
   display: block;
   width: 200px;
   height: 40px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 47px auto;
   padding: 10px;
   background-color: #366da1;
   background-image: url("../../assets/images/callback-icon.svg");
   background-repeat: no-repeat;
-  background-position-x: 152px;
+  background-position-x: 160px;
   background-position-y: 7px;
-  background-size: 30px 30px;
+  background-size: 25px 25px;
   border: none;
   border-radius: 32px;
 
   @media (min-width: $small-desktop-width) {
     width: 500px;
     height: 80px;
+    margin: 0 auto 20px auto;
     background-position-x: 405px;
     background-position-y: 5px;
     background-size: 70px 70px;
@@ -26,7 +27,7 @@
 
 .callback-btn__text {
   color: #ffffff;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
 
   @media (min-width: $small-desktop-width) {

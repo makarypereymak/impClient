@@ -1,15 +1,26 @@
 @import "../../variables.scss";
 
 .slider {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
   padding: 15px 0;
+
+  @media (min-width: $small-desktop-width) {
+    width: 1200px;
+  }
 }
 
 .slider__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 235px;
+  max-height: 265px;
   overflow: hidden;
+
+  @media (min-width: $small-desktop-width) {
+    max-height: fit-content;
+  }
 }
 
 .slider__list {
@@ -17,15 +28,18 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  width: 930px;
+  width: 240px;
   transition-duration: 1s;
   transition-property: transform;
+
+  @media (min-width: $small-desktop-width) {
+    width: 930px;
+  }
 }
 
 .slider__button {
   z-index: 2;
   display: inline-block;
-  padding: 10px;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
@@ -54,6 +68,8 @@
 
   &--mobile {
     display: block;
+    width: 30px;
+    height: 30px;
   }
 
   @media (min-width: $small-desktop-width) {
@@ -69,6 +85,7 @@
   }
 }
 
+.slider__arrow--desktop
 .slider__arrow-path {
   fill: #000000;
 }

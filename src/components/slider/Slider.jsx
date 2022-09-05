@@ -1,66 +1,132 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slider.scss";
 
-function Slider({ title, pics, className }) {
+function Slider({
+  firstTitle,
+  pics,
+  className,
+  secondTitle,
+  id,
+  mobileTranslate,
+  mobileCountCenter,
+}) {
+  const [width, setWidth] = useState(window.screen.availWidth);
+  window.addEventListener("resize", () => {
+    setWidth(window.screen.availWidth);
+  });
+
   const [translateX, setTranslateX] = useState(0);
-  const list = useRef(0);
   const length = pics.length;
   let elementsBeforeCenter = 0;
   let elementsAfterCenter = 0;
 
-  for (let i = 0; i < length; i++) {
-    if (i < Math.floor(length / 2) - 1) {
-      elementsBeforeCenter += 1;
-    } else if (i < Math.floor(length / 2) + 1) {
-      elementsAfterCenter += 1;
+  if (mobileCountCenter === 3) {
+    for (let i = 0; i < length; i++) {
+      if (i < Math.floor(length / 2) - 1) {
+        elementsBeforeCenter += 1;
+      } else if (i > Math.floor(length / 2) + 1) {
+        elementsAfterCenter += 1;
+      }
+    }
+  } else {
+    for (let i = 0; i < length; i++) {
+      if (i < Math.floor(length / 2)) {
+        elementsBeforeCenter += 1;
+      } else if (i > Math.floor(length / 2)) {
+        elementsAfterCenter += 1;
+      }
     }
   }
 
   useEffect(() => {
-    const buttonBack = document.querySelector(".slider__button--back");
-    const buttonNext = document.querySelector(".slider__button--next");
+    let defaultTranslate = 0;
 
-    buttonBack.addEventListener(
+    if (width < 1200) {
+      defaultTranslate = mobileTranslate;
+    } else {
+      defaultTranslate = 310;
+    }
+
+    const buttonBack = document.getElementsByClassName(
+      `slider__button--back slider__button--${className}`
+    );
+    const buttonNext = document.getElementsByClassName(
+      `slider__button--next slider__button--${className}`
+    );
+
+    buttonBack[0].addEventListener(
       "click",
       () => {
-        setTranslateX(translateX - 310);
+        setTranslateX(translateX - defaultTranslate);
       },
       true
     );
 
-    buttonNext.addEventListener(
+    buttonNext[0].addEventListener(
       "click",
       () => {
-        setTranslateX(translateX + 310);
+        setTranslateX(translateX + defaultTranslate);
       },
       true
     );
   });
 
   useEffect(() => {
-    if (translateX <= -(elementsBeforeCenter * 310)) {
-      const button = document.querySelector(".slider__button--back");
-      button.disabled = true;
-    } else if (translateX >= elementsAfterCenter * 310) {
-      const button = document.querySelector(".slider__button--next");
-      button.disabled = true;
+    let defaultTranslate = 0;
+
+    if (width < 1200) {
+      defaultTranslate = mobileTranslate;
     } else {
-      const buttonNext = document.querySelector(".slider__button--next");
-      if (buttonNext.disabled === true) {
-        buttonNext.disabled = false;
+      defaultTranslate = 310;
+    }
+
+    if (translateX <= -(elementsBeforeCenter * defaultTranslate)) {
+      const button = document.getElementsByClassName(
+        `slider__button--back slider__button--${className}`
+      );
+      button[0].disabled = true;
+    } else if (translateX >= elementsAfterCenter * defaultTranslate) {
+      const button = document.getElementsByClassName(
+        `slider__button--next slider__button--${className}`
+      );
+      button[0].disabled = true;
+    } else {
+      const buttonNext = document.getElementsByClassName(
+        `slider__button--next slider__button--${className}`
+      );
+      if (buttonNext[0].disabled === true) {
+        buttonNext[0].disabled = false;
       }
-      const buttonBack = document.querySelector(".slider__button--back");
-      if (buttonBack.disabled === true) {
-        buttonBack.disabled = false;
+      const buttonBack = document.getElementsByClassName(
+        `slider__button--back slider__button--${className}`
+      );
+      if (buttonBack[0].disabled === true) {
+        buttonBack[0].disabled = false;
       }
     }
-  }, [translateX, elementsAfterCenter, elementsBeforeCenter]);
+  }, [
+    translateX,
+    elementsAfterCenter,
+    elementsBeforeCenter,
+    width,
+    className,
+    mobileTranslate,
+  ]);
 
   return (
-    <div className="slider">
-      <h1 className="title--blue">{title}</h1>
+    <div className="slider" id={id}>
+      <h1 className="title--blue">{firstTitle}</h1>
+      {secondTitle ? (
+        <p className={`${className}__text`}>
+          Компания ООО ЧОП ИМПЕРИУМ ДЕЙСТВУЕТ НА <br />
+          ОСНОВАНИИ ВЫДАННОЙ ЛИЦЕНЗИИ
+        </p>
+      ) : null}
       <div className="slider__wrapper">
-        <button className="slider__button slider__button--back" type="button">
+        <button
+          className={`slider__button slider__button--back slider__button--${className}`}
+          type="button"
+        >
           <svg
             className="slider__arrow slider__arrow--back slider__arrow--desktop slider__arrow--back-desktop"
             viewBox="0 0 32 143"
@@ -78,26 +144,32 @@ function Slider({ title, pics, className }) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M0 9L15 0.339745L15 17.6603L0 9Z" fill="#AFC5D9" />
+            <path
+              className="slider__arrow-path"
+              d="M0 9L15 0.339745L15 17.6603L0 9Z"
+              fill="#AFC5D9"
+            />
           </svg>
           <span className="visually-hidden">назад</span>
         </button>
         <ul
-          ref={list}
-          className={"slider__list " + className}
+          className={`slider__list ${className}__list`}
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {pics.map((logo, index, pics) => (
-            <li key={index} id={index} className="our-clients__item">
+            <li key={index} className={`${className}__item`}>
               <img
-                className="our-clients__pic"
+                className={`${className}__pic`}
                 src={logo}
                 alt="Логотип компании"
               />
             </li>
           ))}
         </ul>
-        <button className="slider__button slider__button--next" type="button">
+        <button
+          className={`slider__button slider__button--next slider__button--${className}`}
+          type="button"
+        >
           <svg
             className="slider__arrow slider__arrow--next slider__arrow--desktop slider__arrow--next-desktop"
             viewBox="0 0 32 143"
@@ -115,7 +187,11 @@ function Slider({ title, pics, className }) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M0 9L15 0.339745L15 17.6603L0 9Z" fill="#AFC5D9" />
+            <path
+              className="slider__arrow-path"
+              d="M0 9L15 0.339745L15 17.6603L0 9Z"
+              fill="#AFC5D9"
+            />
           </svg>
           <span className="visually-hidden">вперед</span>
         </button>

@@ -1,8 +1,21 @@
 import React from "react";
+/* global VK */
 import "./Contacts.scss";
 import Social from "../../../components/social/Social";
 
 function Contacts() {
+  VK.Widgets.Group(
+    "vk_groups",
+    {
+      mode: 3,
+      no_cover: 1,
+      height: 400,
+      color1: "FFFFFF",
+      color2: "000000",
+      color3: "5181B8",
+    },
+    215476223
+  );
   return (
     <div className="contacts">
       <h1 className="contacts__title title--blue">Контакты</h1>

@@ -37,42 +37,44 @@
   }
 }
 
-.services-block__item::before {
-  position: absolute;
-  left: -131px;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
-  content: "";
-}
+@media (min-width: $small-desktop-width) {
+  .services-block__item::before {
+    position: absolute;
+    left: -131px;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    content: "";
+  }
 
-#physical::before {
-  background-image: url("../../assets/images/services/camera.jpg");
-}
+  #physical::before {
+    background-image: url("../../assets/images/services/camera.jpg");
+  }
 
-#escort::before {
-  background-image: url("../../assets/images/services/home.jpg");
-}
+  #escort::before {
+    background-image: url("../../assets/images/services/home.jpg");
+  }
 
-#personal::before {
-  background-image: url("../../assets/images/services/gun.jpg");
-}
+  #personal::before {
+    background-image: url("../../assets/images/services/gun.jpg");
+  }
 
-#development::before {
-  background-image: url("../../assets/images/services/home-plus.jpg");
+  #development::before {
+    background-image: url("../../assets/images/services/home-plus.jpg");
+  }
 }
 
 .services-block__item-button {
   position: relative;
   display: inline;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   margin-right: 5px;
   background-color: inherit;
   background-image: url("../../assets/images/plus-blue.png");
   background-repeat: no-repeat;
-  background-size: 22px 22px;
+  background-size: 18px 18px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -81,6 +83,7 @@
   @media (min-width: $small-desktop-width) {
     width: 20px;
     height: 20px;
+    background-size: 22px 22px;
   }
 }
 
@@ -125,10 +128,16 @@
   position: absolute;
   top: 6px;
   left: -27px;
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   background-image: url("../../assets/images/circle-blue.png");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-size: 15px 15px;
   content: "";
+
+  @media (min-width: $small-desktop-width) {
+    width: 24px;
+    height: 24px;
+    background-size: 20px 20px;
+  }
 }

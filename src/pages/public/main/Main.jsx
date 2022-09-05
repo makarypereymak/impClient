@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
 import "./Main.scss";
+import "../../../components/ourClients/OurClients.scss";
+import "../../../components/certificates/Certificates.scss";
+
 import CompanyGroup from "../../../components/companyGroup/CompanyGroup";
-import Certificates from "../../../components/certificates/Certificates";
 import Security from "../../../components/securityBlock/Security";
 import Callback from "../../../components/callback/Callback";
 import Modal from "../../../components/modal/Modal";
 import Slider from "../../../components/slider/Slider";
-import "../../../components/ourClients/OurClients.scss";
 
 import donTeksBank from "../../../assets/images/companies/don-teksbank.jfif";
 import agro from "../../../assets/images/companies/agro.png";
@@ -65,9 +67,24 @@ function Main() {
           }}
         />
       </div>
-      <Slider title={"Клиенты и партнеры"} pics={LOGOS} className="clients" />
-      {/* <Slider title={"Лицензии"} pics={CERTIFICATES} className="cerf" /> */}
-      <Certificates id="certificates" />
+      <Slider
+        firstTitle={"Клиенты и партнеры"}
+        pics={LOGOS}
+        className="our-clients"
+        mobileTranslate={80}
+        mobileCountCenter={3}
+      />
+      <Slider
+        id="certificates"
+        firstTitle={"Лицензии"}
+        pics={CERTIFICATES}
+        className="certificates"
+        secondTitle={
+          "Компания ООО ЧОП ИМПЕРИУМ ДЕЙСТВУЕТ НА <br /> ОСНОВАНИИ ВЫДАННОЙ ЛИЦЕНЗИИ"
+        }
+        mobileTranslate={220}
+        mobileCountCenter={1}
+      />
       <Security id="security" />
       <Modal visible={visible} setVisible={setVisible} />
     </div>

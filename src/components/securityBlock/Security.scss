@@ -43,14 +43,10 @@
   }
 
   &--man {
+    order: 2;
     width: 140px;
     height: 140px;
     border-radius: 100px;
-
-    @media (max-width: $mobile-width-only) {
-      order: 4;
-      margin-top: -349px;
-    }
   }
 
   @media (min-width: $small-desktop-width) {
@@ -62,6 +58,7 @@
     }
 
     &--man {
+      order: 1;
       width: 500px;
       height: 550px;
     }
@@ -69,15 +66,14 @@
 }
 
 .security__text-services-price {
-  width: 50%;
   font-size: var(--mobile-text-font-size);
 
   @media (max-width: $mobile-width-only) {
-    order: 2;
+    order: 1;
   }
 
   @media (min-width: $small-desktop-width) {
-    margin-left: 50%;
+    order: 2;
     font-size: var(--desktop-text-font-size);
   }
 }
@@ -92,4 +88,10 @@
   @media (min-width: $small-desktop-width) {
     font-size: calc(var(--desktop-text-font-size) + 5px);
   }
+}
+
+.security__el-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

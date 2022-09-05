@@ -1,43 +1,44 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import "./Equipments.scss";
-import { useLocation } from "react-router-dom";
+import SlideShow from "../../../components/slideShow/SlideShow";
+
+import eq1 from "../../../assets/images/forEquipments/eq1.jpg";
+import eq2 from "../../../assets/images/forEquipments/eq2.jpg";
+import eq3 from "../../../assets/images/forEquipments/eq3.jpg";
+import eq4 from "../../../assets/images/forEquipments/eq4.jpg";
 
 function Equipments() {
-  let location = useLocation();
-  const firstPic = useRef(0);
-  const secondPic = useRef(0);
+  const firstSliderItems = [
+    {
+      id: 1,
+      pic: eq1,
+    },
+    {
+      id: 2,
+      pic: eq3,
+    },
+  ];
 
-  useEffect(() => {
-    const firstInterval = setInterval(() => {
-      if (firstPic.current.className === "equipments__pic equipments__pic--1") {
-        firstPic.current.className = "equipments__pic equipments__pic--3";
-      } else {
-        firstPic.current.className = "equipments__pic equipments__pic--1";
-      }
-    }, 4000);
-
-    const secondInterval = setInterval(() => {
-      if (
-        secondPic.current.className === "equipments__pic equipments__pic--2"
-      ) {
-        secondPic.current.className = "equipments__pic equipments__pic--4";
-      } else {
-        secondPic.current.className = "equipments__pic equipments__pic--2";
-      }
-    }, 5000);
-
-    if (location.path !== "/equipments") {
-      clearInterval(firstInterval);
-      clearInterval(secondInterval);
-    }
-  });
+  const secondSliderItems = [
+    {
+      id: 1,
+      pic: eq2,
+    },
+    {
+      id: 2,
+      pic: eq4,
+    },
+  ];
 
   return (
     <div className="equipments">
       <h1 className="equipments__title title--blue">Оборудование</h1>
-      <div className="equipments__wrapper-for-photo">
-        <div className="equipments__pic equipments__pic--1" ref={firstPic} />
-        <div className="equipments__pic equipments__pic--2" ref={secondPic} />
+      <div className="equipments__slider-wrapper">
+        <SlideShow items={firstSliderItems} classNameModify="slideshow--left" />
+        <SlideShow
+          items={secondSliderItems}
+          classNameModify="slideshow--right"
+        />
       </div>
       <div className="equipments__wrapper-for-text">
         <p>
@@ -94,28 +95,6 @@ function Equipments() {
             любых технических систем безопасности. Возможность проведения
             ремонтных и восстановительных работ
           </li>
-          <li>- Установка средств и систем охранно-пожарной сигнализации</li>
-          <li>- Установка средств и систем охранного телевидения</li>
-          <li>- Установка средств и систем контроля и управления доступом</li>
-          <li>- Установка домофонов и переговорных устройств</li>
-          <li>
-            - Установка средств и систем оповещения, музыкальной трансляции
-          </li>
-          <li>- Установка источников питания</li>
-          <li>
-            - Установка средств пожаротушения (пожарных сигнализаций и пр.)
-          </li>
-          <li>- Установка взрывозащищенного оборудования</li>
-          <li>- Установка (Шкафы, щитки, боксы)</li>
-          <li>- Установка сетевого оборудования</li>
-          <li>- Установка кабелей и проводов</li>
-          <li>- Обслуживание охранного оборудования</li>
-          <li>- Физическая охрана на предприятие</li>
-          <li>- Физическая охрана для частных лиц</li>
-          <li>- Физическая охрана для юр. лиц</li>
-          <li>- Физическая охрана на производство</li>
-          <li>- Установка системы "Умный дом"</li>
-          <li>- Установка систем диспетчерской связи и вызова персонала </li>
         </ul>
       </div>
     </div>
