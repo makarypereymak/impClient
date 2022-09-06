@@ -1,19 +1,29 @@
 import React, { useState, useEffect } from "react";
+import MyModal from "../myModal/MyModal";
 import "./Slider.scss";
 
 function Slider({
   firstTitle,
   pics,
   className,
-  secondTitle,
   id,
   mobileTranslate,
   mobileCountCenter,
 }) {
+  const [show, setShow] = useState(false);
+  const [modalPic, setModalPic] = useState(0);
   const [width, setWidth] = useState(window.screen.availWidth);
   window.addEventListener("resize", () => {
     setWidth(window.screen.availWidth);
   });
+
+  const debounce = (callback, timeoutDelay) => {
+    let timeoutId;
+    return (...rest) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+    };
+  };
 
   const [translateX, setTranslateX] = useState(0);
   const length = pics.length;
@@ -56,17 +66,17 @@ function Slider({
 
     buttonBack[0].addEventListener(
       "click",
-      () => {
-        setTranslateX(translateX - defaultTranslate);
-      },
+      debounce(() => {
+        setTranslateX(translateX + defaultTranslate);
+      }, 600),
       true
     );
 
     buttonNext[0].addEventListener(
       "click",
-      () => {
-        setTranslateX(translateX + defaultTranslate);
-      },
+      debounce(() => {
+        setTranslateX(translateX - defaultTranslate);
+      }, 600),
       true
     );
   });
@@ -80,12 +90,12 @@ function Slider({
       defaultTranslate = 310;
     }
 
-    if (translateX <= -(elementsBeforeCenter * defaultTranslate)) {
+    if (translateX >= elementsBeforeCenter * defaultTranslate) {
       const button = document.getElementsByClassName(
         `slider__button--back slider__button--${className}`
       );
       button[0].disabled = true;
-    } else if (translateX >= elementsAfterCenter * defaultTranslate) {
+    } else if (translateX <= -(elementsAfterCenter * defaultTranslate)) {
       const button = document.getElementsByClassName(
         `slider__button--next slider__button--${className}`
       );
@@ -116,13 +126,9 @@ function Slider({
   return (
     <div className="slider" id={id}>
       <h1 className="title--blue">{firstTitle}</h1>
-      {secondTitle ? (
-        <p className={`${className}__text`}>
-          Компания ООО ЧОП ИМПЕРИУМ ДЕЙСТВУЕТ НА <br />
-          ОСНОВАНИИ ВЫДАННОЙ ЛИЦЕНЗИИ
-        </p>
-      ) : null}
-      <div className="slider__wrapper">
+      <div
+        className={`slider__wrapper slider__wrapper--background-${className}`}
+      >
         <button
           className={`slider__button slider__button--back slider__button--${className}`}
           type="button"
@@ -156,15 +162,36 @@ function Slider({
           className={`slider__list ${className}__list`}
           style={{ transform: `translateX(${translateX}px)` }}
         >
-          {pics.map((logo, index, pics) => (
-            <li key={index} className={`${className}__item`}>
-              <img
-                className={`${className}__pic`}
-                src={logo}
-                alt="Логотип компании"
-              />
-            </li>
-          ))}
+          {pics.map((logo, index, pics) => {
+            if (className === "certificates") {
+              return (
+                <li
+                  key={index}
+                  className={`${className}__item`}
+                  onClick={() => {
+                    setModalPic(logo);
+                    setShow(!show);
+                  }}
+                >
+                  <img
+                    className={`${className}__pic`}
+                    src={logo}
+                    alt="Логотип компании"
+                  />
+                </li>
+              );
+            } else {
+              return (
+                <li key={index} className={`${className}__item`}>
+                  <img
+                    className={`${className}__pic`}
+                    src={logo}
+                    alt="Логотип компании"
+                  />
+                </li>
+              );
+            }
+          })}
         </ul>
         <button
           className={`slider__button slider__button--next slider__button--${className}`}
@@ -196,6 +223,7 @@ function Slider({
           <span className="visually-hidden">вперед</span>
         </button>
       </div>
+      <MyModal visible={show} setVisible={setShow} src={modalPic} />
     </div>
   );
 }

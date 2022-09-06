@@ -18,8 +18,23 @@
   max-height: 265px;
   overflow: hidden;
 
+  &--background-our-clients::before {
+    position: absolute;
+    top: 12px;
+    left: 42px;
+    width: 236px;
+    height: 53px;
+    background-color: #afc5d9;
+    border-radius: 23px;
+    content: "";
+  }
+
   @media (min-width: $small-desktop-width) {
     max-height: fit-content;
+
+    &--background-our-clients::before {
+      content: none;
+    }
   }
 }
 

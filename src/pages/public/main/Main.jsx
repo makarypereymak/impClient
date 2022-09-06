@@ -18,6 +18,10 @@ import loko from "../../../assets/images/companies/loko.png";
 import mts from "../../../assets/images/companies/mts.png";
 import theatre from "../../../assets/images/companies/theatre.png";
 import eco from "../../../assets/images/companies/eco.png";
+import lukoil from "../../../assets/images/companies/lukoil.png";
+import rostov from "../../../assets/images/companies/rostov.png";
+import PNK from "../../../assets/images/companies/pnk-group_logo.png";
+import eksmo from "../../../assets/images/companies/eksmo.png";
 
 import cer11 from "../../../assets/images/certificates/cer-1-1.jpg";
 import cer12 from "../../../assets/images/certificates/cer-1-2.jpg";
@@ -32,7 +36,19 @@ import cer42 from "../../../assets/images/certificates/cer-4-2.jpg";
 function Main() {
   const [visible, setVisible] = useState(false);
   let location = useLocation();
-  const LOGOS = [donTeksBank, agro, gazprom, loko, mts, theatre, eco];
+  const LOGOS = [
+    donTeksBank,
+    agro,
+    gazprom,
+    loko,
+    mts,
+    theatre,
+    eco,
+    lukoil,
+    rostov,
+    PNK,
+    eksmo,
+  ];
   const CERTIFICATES = [
     cer11,
     cer12,
@@ -79,9 +95,6 @@ function Main() {
         firstTitle={"Лицензии"}
         pics={CERTIFICATES}
         className="certificates"
-        secondTitle={
-          "Компания ООО ЧОП ИМПЕРИУМ ДЕЙСТВУЕТ НА <br /> ОСНОВАНИИ ВЫДАННОЙ ЛИЦЕНЗИИ"
-        }
         mobileTranslate={220}
         mobileCountCenter={1}
       />

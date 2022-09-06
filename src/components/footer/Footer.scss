@@ -37,6 +37,10 @@
   @media (max-width: $mobile-width-only) {
     order: 3;
   }
+
+  @media (min-width: $small-desktop-width) {
+    margin-left: 74px;
+  }
 }
 
 .footer__logo {

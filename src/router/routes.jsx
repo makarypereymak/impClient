@@ -2,9 +2,6 @@ import React from "react";
 import Main from "../pages/public/main/Main";
 import Equipments from "../pages/public/equipments/Equipments";
 import Services from "../pages/public/services/Services";
-import Login from "../pages/public/login/Login";
-import AdminMain from "../pages/private/admin/AdminMain";
-import Owner from "../pages/private/owner/Owner";
 import Vacancies from "../pages/public/vacancies/Vacancies";
 import Contacts from "../pages/public/contacts/Contacts";
 
@@ -70,13 +67,6 @@ export const PUBLIC_ROUTES = [
     textLink: "Оборудование",
   },
   {
-    path: "/login",
-    exact: true,
-    element: <Login />,
-    idName: "",
-    textLink: null,
-  },
-  {
     path: "/vacancies",
     exact: true,
     element: <Vacancies />,
@@ -91,22 +81,3 @@ export const PUBLIC_ROUTES = [
     textLink: "Контакты",
   },
 ];
-
-export const PRIVATE_ROUTES = {
-  ADMIN: [
-    {
-      path: "/adminMain",
-      exact: true,
-      element: <AdminMain />,
-      textLink: "Админ Главная",
-    },
-  ],
-  OWNER: [
-    {
-      path: "/ownerMain",
-      exact: true,
-      element: <Owner />,
-      textLink: "Владелец Главная",
-    },
-  ],
-};
