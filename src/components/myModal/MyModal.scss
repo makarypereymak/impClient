@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .myModal {
   position: fixed;
   top: 0;
@@ -19,6 +21,11 @@
 .myModal__pic {
   max-width: 800px;
   max-height: 423px;
+
+  @media (min-width: $small-desktop-width) {
+    max-width: 847px;
+    max-height: 719px;
+  }
 }
 
 .myModal--active {

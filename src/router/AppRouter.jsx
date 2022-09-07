@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import { PUBLIC_ROUTES } from "./routes";
-import NavBarHight from "../components/navBarHight/NavBarHight";
 
 const AppRouter = () => {
   return (

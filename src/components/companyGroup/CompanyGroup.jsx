@@ -14,7 +14,7 @@ function CompanyGroup() {
       </h1>
       <ul className="company-group__list">
         <li className="company-group__item">
-          <Link className="company-group__link" to="#">
+          <Link className="company-group__link" to="/equipments">
             <img
               className="company-group__logo"
               src={IT}
@@ -26,7 +26,7 @@ function CompanyGroup() {
           </p>
         </li>
         <li className="company-group__item">
-          <Link className="company-group__link" to="#">
+          <Link className="company-group__link" to="/services">
             <img
               className="company-group__logo"
               src={IS}
@@ -38,7 +38,7 @@ function CompanyGroup() {
           </p>
         </li>
         <li className="company-group__item">
-          <Link className="company-group__link" to="#">
+          <Link className="company-group__link" to="/#security">
             <img
               className="company-group__logo"
               src={ISS}

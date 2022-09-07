@@ -30,19 +30,19 @@ function Slider({
   let elementsBeforeCenter = 0;
   let elementsAfterCenter = 0;
 
-  if (mobileCountCenter === 3) {
+  if (mobileCountCenter === 1 && width < 1200) {
     for (let i = 0; i < length; i++) {
-      if (i < Math.floor(length / 2) - 1) {
+      if (i < Math.floor(length / 2)) {
         elementsBeforeCenter += 1;
-      } else if (i > Math.floor(length / 2) + 1) {
+      } else if (i > Math.floor(length / 2)) {
         elementsAfterCenter += 1;
       }
     }
   } else {
     for (let i = 0; i < length; i++) {
-      if (i < Math.floor(length / 2)) {
+      if (i < Math.floor(length / 2) - 1) {
         elementsBeforeCenter += 1;
-      } else if (i > Math.floor(length / 2)) {
+      } else if (i > Math.floor(length / 2) + 1) {
         elementsAfterCenter += 1;
       }
     }

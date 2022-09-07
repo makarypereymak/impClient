@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import "./Main.scss";
@@ -8,7 +8,6 @@ import "../../../components/certificates/Certificates.scss";
 import CompanyGroup from "../../../components/companyGroup/CompanyGroup";
 import Security from "../../../components/securityBlock/Security";
 import Callback from "../../../components/callback/Callback";
-import Modal from "../../../components/modal/Modal";
 import Slider from "../../../components/slider/Slider";
 
 import donTeksBank from "../../../assets/images/companies/don-teksbank.jfif";
@@ -34,7 +33,6 @@ import cer41 from "../../../assets/images/certificates/cer-4-1.jpg";
 import cer42 from "../../../assets/images/certificates/cer-4-2.jpg";
 
 function Main() {
-  const [visible, setVisible] = useState(false);
   let location = useLocation();
   const LOGOS = [
     donTeksBank,
@@ -76,12 +74,7 @@ function Main() {
     <div>
       <div className="main">
         <CompanyGroup />
-        <Callback
-          id="callback"
-          onClick={() => {
-            setVisible(!visible);
-          }}
-        />
+        <Callback id="callback" />
       </div>
       <Slider
         firstTitle={"Клиенты и партнеры"}
@@ -99,7 +92,6 @@ function Main() {
         mobileCountCenter={1}
       />
       <Security id="security" />
-      <Modal visible={visible} setVisible={setVisible} />
     </div>
   );
 }

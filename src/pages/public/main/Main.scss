@@ -2,7 +2,7 @@
 
 .main {
   margin-top: -28px;
-  padding: 20px;
+  padding: 20px 20px 87px 20px;
   background-image: url("../../../assets/images/background-main.png");
   background-repeat: no-repeat;
   background-position-x: center;
@@ -11,7 +11,7 @@
 
   @media (min-width: $small-desktop-width) {
     margin-top: -41px;
-    padding: 0 50px 40px 50px;
+    padding: 0 50px 111px 50px;
     background-position-y: -110px;
   }
 }
