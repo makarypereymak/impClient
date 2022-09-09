@@ -30,24 +30,21 @@
     width: 200px;
     height: 200px;
   }
+
+  @media (min-width: $big-desktop-width) {
+    box-sizing: content-box;
+    width: 250px;
+    height: 250px;
+    padding: 37px;
+  }
 }
 
 .adventages__text {
   &--big {
-    font-size: calc(var(--mobile-title-font-size) + 5px);
+    font-size: calc(var(--text-font-size) + 5px);
   }
 
   &--small {
-    font-size: calc(var(--mobile-text-font-size) + 5px);
-  }
-
-  @media (min-width: $small-desktop-width) {
-    &--big {
-      font-size: calc(var(--desktop-title-font-size) + 5px);
-    }
-
-    &--smal {
-      font-size: calc(var(--desktop-text-font-size) + 5px);
-    }
+    font-size: calc(var(--text-font-size) + 2px);
   }
 }

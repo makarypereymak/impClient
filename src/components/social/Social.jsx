@@ -5,23 +5,23 @@ function Social() {
   const socialList = [
     {
       name: "inst",
-      link: "https://www.youtube.com/",
+      link: "https://www.instagram.com/imperium.rostov/",
     },
     {
       name: "vk",
-      link: "https://www.youtube.com/",
+      link: "https://vk.com/imperiumrnd",
     },
     {
       name: "dzen",
-      link: "https://www.youtube.com/",
+      link: "https://zen.yandex.ru/id/62ff44c8ee99f85888b552a6",
     },
     {
       name: "whats",
-      link: "https://www.youtube.com/",
+      link: "https://wa.me/79282791907",
     },
     {
       name: "telegram",
-      link: "https://www.youtube.com/",
+      link: "https://t.me/imperiumrnd",
     },
   ];
 
@@ -133,6 +133,8 @@ function Social() {
             className={"social__item social__item--" + item.name}
           >
             <a
+              target="_blank"
+              rel="noreferrer"
               href={item.link}
               className={"social__link social__link--" + item.name}
             >

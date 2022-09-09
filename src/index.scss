@@ -54,7 +54,7 @@ ul {
   margin-bottom: 15px;
   padding: 10px;
   color: #ffffff;
-  font-size: var(--mobile-title-font-size);
+  font-size: var(--title-font-size);
   text-transform: uppercase;
   text-decoration: none;
   background-color: rgb(54 109 161 / 70%);
@@ -63,17 +63,32 @@ ul {
     min-width: 170px;
   }
 
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    margin-bottom: 40px;
+  }
+
   @media (min-width: $small-desktop-width) {
     min-width: 340px;
-    font-size: var(--desktop-title-font-size);
   }
 }
 
 :root {
-  --mobile-title-font-size: 15px;
-  --mobile-text-font-size: 11px;
-  --desktop-title-font-size: 28px;
-  --desktop-text-font-size: 20px;
+  --title-font-size: 19px;
+  --text-font-size: 17px;
+  --item-font-size: 15px;
+
+  @media (min-width: $small-desktop-width) {
+    --title-font-size: 33px;
+    --text-font-size: 29px;
+    --item-font-size: 25px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    --title-font-size: 43px;
+    --text-font-size: 40px;
+    --item-font-size: 35px;
+  }
 }
 
 #root {

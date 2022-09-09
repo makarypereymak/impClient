@@ -39,7 +39,7 @@
   }
 
   @media (min-width: $small-desktop-width) {
-    margin-left: 74px;
+    padding-left: 38px;
   }
 }
 
@@ -49,4 +49,5 @@
 
 .footer__copyright {
   margin: 0 0 0 20px;
+  font-size: calc(var(--item-font-size) - 4px);
 }

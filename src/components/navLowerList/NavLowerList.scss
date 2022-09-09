@@ -50,7 +50,7 @@
   min-height: 30px;
   padding: 5px 0;
   color: #ffffff;
-  font-size: 14px;
+  font-size: calc(var(--item-font-size) - 2px);
   text-decoration: none;
 }
 

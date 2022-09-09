@@ -22,14 +22,10 @@
 
 .security__wrapper-for-list {
   width: 50%;
-  font-size: var(--mobile-text-font-size);
+  font-size: var(--item-font-size);
 
   @media (max-width: $mobile-width-only) {
     order: 3;
-  }
-
-  @media (min-width: $small-desktop-width) {
-    font-size: var(--desktop-text-font-size);
   }
 }
 
@@ -66,7 +62,7 @@
 }
 
 .security__text-services-price {
-  font-size: var(--mobile-text-font-size);
+  font-size: var(--item-font-size);
 
   @media (max-width: $mobile-width-only) {
     order: 1;
@@ -74,24 +70,29 @@
 
   @media (min-width: $small-desktop-width) {
     order: 2;
-    font-size: var(--desktop-text-font-size);
   }
 }
 
 .security__text-more-info {
-  font-size: calc(var(--mobile-text-font-size) + 5px);
+  font-size: var(--text-font-size);
+  text-align: center;
 
   @media (max-width: $mobile-width-only) {
     order: 5;
   }
+}
 
-  @media (min-width: $small-desktop-width) {
-    font-size: calc(var(--desktop-text-font-size) + 5px);
-  }
+.security__blue-words {
+  color: #2b7298;
+  font-size: calc(var(--text-font-size) + 1px);
 }
 
 .security__el-wrapper {
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media (min-width: $small-desktop-width) {
+    margin-top: 28px;
+  }
 }

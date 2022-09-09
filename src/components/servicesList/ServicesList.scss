@@ -19,22 +19,17 @@
 }
 
 .services-block__title {
-  font-size: 23px;
+  font-size: var(--title-font-size);
 
   @media (min-width: $small-desktop-width) {
     margin: 0 0 30px;
-    font-size: 30px;
   }
 }
 
 .services-block__item {
   position: relative;
   margin-bottom: 30px;
-  font-size: 15px;
-
-  @media (min-width: $small-desktop-width) {
-    font-size: 20px;
-  }
+  font-size: var(--text-font-size);
 }
 
 @media (min-width: $small-desktop-width) {
@@ -81,9 +76,15 @@
   transition-duration: 500ms;
 
   @media (min-width: $small-desktop-width) {
-    width: 20px;
-    height: 20px;
-    background-size: 22px 22px;
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px;
   }
 }
 
@@ -96,12 +97,11 @@
   display: inline;
   margin: 0;
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--item-font-size);
   line-height: 13px;
   vertical-align: bottom;
 
   @media (min-width: $small-desktop-width) {
-    font-size: 17px;
     line-height: 67px;
     vertical-align: sub;
   }
@@ -118,26 +118,47 @@
   padding-left: 20px;
   transition-duration: 1s;
   transition-property: display;
-}
 
-.services-block__item-lower-list--list-show li {
-  position: relative;
+  @media (min-width: $big-desktop-width) {
+    max-width: 1000px;
+    padding-left: 81px;
+  }
 }
 
 .services-block__item-lower-list--list-show li::before {
   position: absolute;
   top: 6px;
   left: -27px;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background-image: url("../../assets/images/circle-blue.png");
   background-repeat: no-repeat;
-  background-size: 15px 15px;
+  background-size: 12px 12px;
   content: "";
 
-  @media (min-width: $small-desktop-width) {
-    width: 24px;
-    height: 24px;
-    background-size: 20px 20px;
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    left: -43px;
+    width: 33px;
+    height: 33px;
+    background-size: 33px 33px;
+  }
+}
+
+.services-block__item-lower-list--list-show li {
+  position: relative;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    margin-bottom: 20px;
   }
 }
