@@ -19,14 +19,13 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 240px;
   max-height: 265px;
   overflow: hidden;
 
   &--background-our-clients::before {
     position: absolute;
     top: 12px;
-    left: 0;
+    left: 3px;
     width: 236px;
     height: 53px;
     background-color: #afc5d9;
@@ -60,6 +59,7 @@
 .slider__button {
   z-index: 2;
   display: inline-block;
+  padding: 0;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;

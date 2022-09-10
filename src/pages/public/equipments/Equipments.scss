@@ -28,19 +28,19 @@
 .equipments__list-item {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 25px;
+  padding-left: 37px;
   font-size: var(--item-font-size);
 
   @media (min-width: $big-desktop-width) {
     margin-bottom: 20px;
-    padding-left: 35px;
+    padding-left: 62px;
   }
 }
 
 .equipments__list-item::before {
   position: absolute;
   top: 6px;
-  left: -27px;
+  left: 0;
   width: 12px;
   height: 12px;
   background-image: url("../../../assets/images/circle-blue.png");
@@ -55,7 +55,6 @@
   }
 
   @media (min-width: $big-desktop-width) {
-    left: -10px;
     width: 33px;
     height: 33px;
     background-size: 33px 33px;
