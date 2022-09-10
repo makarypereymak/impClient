@@ -126,9 +126,7 @@ function Slider({
   return (
     <div className="slider" id={id}>
       <h1 className="title--blue">{firstTitle}</h1>
-      <div
-        className={`slider__wrapper slider__wrapper--background-${className}`}
-      >
+      <div className="slider__main-wrapper">
         <button
           className={`slider__button slider__button--back slider__button--${className}`}
           type="button"
@@ -158,41 +156,45 @@ function Slider({
           </svg>
           <span className="visually-hidden">назад</span>
         </button>
-        <ul
-          className={`slider__list ${className}__list`}
-          style={{ transform: `translateX(${translateX}px)` }}
+        <div
+          className={`slider__list-wrapper slider__list-wrapper--background-${className}`}
         >
-          {pics.map((logo, index, pics) => {
-            if (className === "certificates") {
-              return (
-                <li
-                  key={index}
-                  className={`${className}__item`}
-                  onClick={() => {
-                    setModalPic(logo);
-                    setShow(!show);
-                  }}
-                >
-                  <img
-                    className={`${className}__pic`}
-                    src={logo}
-                    alt="Логотип компании"
-                  />
-                </li>
-              );
-            } else {
-              return (
-                <li key={index} className={`${className}__item`}>
-                  <img
-                    className={`${className}__pic`}
-                    src={logo}
-                    alt="Логотип компании"
-                  />
-                </li>
-              );
-            }
-          })}
-        </ul>
+          <ul
+            className={`slider__list ${className}__list`}
+            style={{ transform: `translateX(${translateX}px)` }}
+          >
+            {pics.map((logo, index, pics) => {
+              if (className === "certificates") {
+                return (
+                  <li
+                    key={index}
+                    className={`${className}__item`}
+                    onClick={() => {
+                      setModalPic(logo);
+                      setShow(!show);
+                    }}
+                  >
+                    <img
+                      className={`${className}__pic`}
+                      src={logo}
+                      alt="Логотип компании"
+                    />
+                  </li>
+                );
+              } else {
+                return (
+                  <li key={index} className={`${className}__item`}>
+                    <img
+                      className={`${className}__pic`}
+                      src={logo}
+                      alt="Логотип компании"
+                    />
+                  </li>
+                );
+              }
+            })}
+          </ul>
+        </div>
         <button
           className={`slider__button slider__button--next slider__button--${className}`}
           type="button"

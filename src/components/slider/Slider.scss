@@ -11,7 +11,11 @@
   }
 }
 
-.slider__wrapper {
+.slider__main-wrapper {
+  display: flex;
+}
+
+.slider__list-wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -21,7 +25,7 @@
   &--background-our-clients::before {
     position: absolute;
     top: 12px;
-    left: 42px;
+    left: 0;
     width: 236px;
     height: 53px;
     background-color: #afc5d9;
