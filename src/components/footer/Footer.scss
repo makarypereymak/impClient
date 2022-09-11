@@ -27,18 +27,21 @@
     flex-direction: row;
     height: 502px;
   }
+
+  @media (min-width: $big-desktop-width) {
+    width: 1920px;
+    margin: 0 auto;
+  }
 }
 
 .footer__wrapper-for-logo {
   display: flex;
   align-items: baseline;
+  order: 3;
   height: max-content;
 
-  @media (max-width: $mobile-width-only) {
-    order: 3;
-  }
-
   @media (min-width: $small-desktop-width) {
+    order: 0;
     padding-left: 38px;
   }
 }

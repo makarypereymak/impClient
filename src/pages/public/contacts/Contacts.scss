@@ -5,6 +5,13 @@
   margin-bottom: 61px;
 }
 
+.contacts__wrapper-for-title {
+  @media (min-width: $big-desktop-width) {
+    width: 1470px;
+    margin: 0 auto;
+  }
+}
+
 .contacts__wrapper-for-info {
   display: grid;
   grid-template-columns: 1fr 1fr;

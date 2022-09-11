@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Vacancies.scss";
 
 function Vacancies() {
+  useEffect(() => {
+    const el = document.getElementsByClassName("header");
+    el[0].scrollIntoView({ behavior: "smooth" });
+  });
+
   return (
     <div className="vacancies">
-      <h1 className="vacancies__title title--blue">Трудоустройство</h1>
+      <div className="vacancies__wrapper-for-title">
+        <h1 className="vacancies__title title--blue">Трудоустройство</h1>
+      </div>
       <div className="vacancies__main-wrapper">
         <div className="vacancies__wrapper-for-phone">
           <a

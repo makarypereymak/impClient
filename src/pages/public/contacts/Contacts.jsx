@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 /* global VK */
 import "./Contacts.scss";
 import Social from "../../../components/social/Social";
 
 function Contacts() {
+  useEffect(() => {
+    const el = document.getElementsByClassName("header");
+    el[0].scrollIntoView({ behavior: "smooth" });
+  });
+
   VK.Widgets.Group(
     "vk_groups",
     {
@@ -18,7 +23,9 @@ function Contacts() {
   );
   return (
     <div className="contacts">
-      <h1 className="contacts__title title--blue">Контакты</h1>
+      <div className="contacts__wrapper-for-title">
+        <h1 className="contacts__title title--blue">Контакты</h1>
+      </div>
       <div className="contacts__wrapper-for-info">
         <div className="contacts__info-block contacts__info-block--address">
           <span className="contacts__label">адрес</span>

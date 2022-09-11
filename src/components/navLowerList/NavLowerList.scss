@@ -50,8 +50,12 @@
   min-height: 30px;
   padding: 5px 0;
   color: #ffffff;
-  font-size: calc(var(--item-font-size) - 2px);
+  font-size: 19px;
   text-decoration: none;
+
+  @media (min-width: $big-desktop-width) {
+    font-size: 27px;
+  }
 }
 
 .footer__nav-item .nav__lower-list-item {

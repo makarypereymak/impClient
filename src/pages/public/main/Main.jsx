@@ -67,6 +67,9 @@ function Main() {
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      const el = document.getElementsByClassName("header");
+      el[0].scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 

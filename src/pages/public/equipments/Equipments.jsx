@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Equipments.scss";
 import SlideShow from "../../../components/slideShow/SlideShow";
 
@@ -8,6 +8,11 @@ import eq3 from "../../../assets/images/forEquipments/eq3.jpg";
 import eq4 from "../../../assets/images/forEquipments/eq4.jpg";
 
 function Equipments() {
+  useEffect(() => {
+    const el = document.getElementsByClassName("header");
+    el[0].scrollIntoView({ behavior: "smooth" });
+  });
+
   const firstSliderItems = [
     {
       id: 1,
@@ -32,7 +37,9 @@ function Equipments() {
 
   return (
     <div className="equipments">
-      <h1 className="equipments__title title--blue">Оборудование</h1>
+      <div className="equipments__wrapper-for-title">
+        <h1 className="equipments__title title--blue">Оборудование</h1>
+      </div>
       <div className="equipments__slider-wrapper">
         <SlideShow items={firstSliderItems} classNameModify="slideshow--left" />
         <SlideShow

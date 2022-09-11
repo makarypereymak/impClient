@@ -38,6 +38,10 @@
     background-position-y: -119px;
     background-size: contain;
   }
+
+  @media (min-width: $big-desktop-width) {
+    background-position-y: -77px;
+  }
 }
 
 .company-group__list {

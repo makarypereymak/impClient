@@ -4,6 +4,13 @@
   margin-top: 50px;
 }
 
+.equipments__wrapper-for-title {
+  @media (min-width: $big-desktop-width) {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
 .equipments__wrapper-for-photo {
   display: flex;
   margin: 50px;
@@ -28,8 +35,12 @@
 .equipments__list-item {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 37px;
+  padding-left: 25px;
   font-size: var(--item-font-size);
+
+  @media (min-width: $small-desktop-width) {
+    padding-left: 37px;
+  }
 
   @media (min-width: $big-desktop-width) {
     margin-bottom: 20px;

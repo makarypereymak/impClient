@@ -27,12 +27,17 @@ function Services() {
       }
 
       openUl(id);
+    } else {
+      const el = document.getElementsByClassName("header");
+      el[0].scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
   return (
     <div className="services">
-      <h1 className="services__title title--blue">Услуги</h1>
+      <div className="services__wrapper-for-title">
+        <h1 className="services__title title--blue">Услуги</h1>
+      </div>
       <LawBlock />
       <ServicesList />
     </div>
