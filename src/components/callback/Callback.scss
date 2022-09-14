@@ -3,16 +3,12 @@
 .callback-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 200px;
   height: 40px;
   margin: 0 auto 0 auto;
   text-decoration: none;
   background-color: #366da1;
-  background-image: url("../../assets/images/callback-icon.svg");
-  background-repeat: no-repeat;
-  background-position-x: 160px;
-  background-position-y: 7px;
-  background-size: 25px 25px;
   border: none;
   border-radius: 32px;
 
@@ -21,9 +17,6 @@
     height: 80px;
     margin: 0 auto 20px auto;
     padding: 10px;
-    background-position-x: 417px;
-    background-position-y: 13px;
-    background-size: 70px 70px;
   }
 }
 
@@ -32,13 +25,11 @@
 }
 
 .callback-btn__text {
-  margin-left: 24px;
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
 
   @media (min-width: $small-desktop-width) {
-    margin-left: 51px;
     font-size: 37px;
   }
 }

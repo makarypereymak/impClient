@@ -7,20 +7,30 @@ function Contacts() {
   useEffect(() => {
     const el = document.getElementsByClassName("header");
     el[0].scrollIntoView({ behavior: "smooth" });
+
+    const globalWidth = window.screen.availWidth;
+    let widgetWidth;
+
+    if (globalWidth < 660) {
+      widgetWidth = 220;
+    } else if (globalWidth >= 660) {
+      widgetWidth = 500;
+    }
+
+    VK.Widgets.Group(
+      "vk_groups",
+      {
+        mode: 3,
+        no_cover: 1,
+        width: widgetWidth,
+        color1: "FFFFFF",
+        color2: "000000",
+        color3: "5181B8",
+      },
+      215476223
+    );
   });
 
-  VK.Widgets.Group(
-    "vk_groups",
-    {
-      mode: 3,
-      no_cover: 1,
-      height: 400,
-      color1: "FFFFFF",
-      color2: "000000",
-      color3: "5181B8",
-    },
-    215476223
-  );
   return (
     <div className="contacts">
       <div className="contacts__wrapper-for-title">
@@ -87,6 +97,10 @@ function Contacts() {
             8(928) 554-54-55
           </a>
         </div>
+        {/* <div className="contacts__wrapper-for-vk-group">
+          <div className="contacts__vk-group" id="vk_groups"></div>
+        </div> */}
+
         <div className="contacts__vk-group" id="vk_groups"></div>
       </div>
     </div>

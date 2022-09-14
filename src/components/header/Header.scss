@@ -145,8 +145,7 @@
     background-color: rgba(54, 109, 161, 1);
   }
 
-  .nav__open-lower-list:hover + .nav__lower-list .nav__lower-list-item--header,
-  .nav__item:hover .nav__lower-list .nav__lower-list-item--header {
+  .nav__lower-list-item--header {
     box-sizing: border-box;
     min-height: 50px;
     padding: 15px 25px;
@@ -159,8 +158,8 @@
   //   font-size: 20px;
   // }
 
-  .nav__lower-list-item:hover {
-    background-color: rgba(54, 109, 161, 1);
+  .nav__lower-list-item--header:hover {
+    background-color: rgba(60, 71, 88, 0.1);
   }
 }
 
