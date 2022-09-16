@@ -20,11 +20,21 @@ export const PUBLIC_ROUTES = [
       },
       {
         id: 1,
+        idName: "ourClients",
+        text: "Клиенты и партнёры",
+      },
+      {
+        id: 2,
+        idName: "letters",
+        text: "Благодарственные письма",
+      },
+      {
+        id: 3,
         idName: "security",
         text: "Охрана",
       },
       {
-        id: 2,
+        id: 4,
         idName: "callback",
         text: "Обратный звонок",
       },

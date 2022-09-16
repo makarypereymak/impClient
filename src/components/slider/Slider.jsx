@@ -3,6 +3,7 @@ import MyModal from "../myModal/MyModal";
 import "./Slider.scss";
 
 function Slider({
+  modalExist,
   firstTitle,
   pics,
   className,
@@ -164,7 +165,7 @@ function Slider({
             style={{ transform: `translateX(${translateX}px)` }}
           >
             {pics.map((logo, index, pics) => {
-              if (className === "certificates") {
+              if (modalExist === true) {
                 return (
                   <li
                     key={index}

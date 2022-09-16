@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import "./Main.scss";
 import "../../../components/ourClients/OurClients.scss";
 import "../../../components/certificates/Certificates.scss";
+import "../../../components/letters/Letters.scss";
 
 import CompanyGroup from "../../../components/companyGroup/CompanyGroup";
 import Security from "../../../components/securityBlock/Security";
@@ -32,6 +33,12 @@ import cer32 from "../../../assets/images/certificates/cer-3-2.jpg";
 import cer41 from "../../../assets/images/certificates/cer-4-1.jpg";
 import cer42 from "../../../assets/images/certificates/cer-4-2.jpg";
 
+import let1 from "../../../assets/images/letters/let1.jpg";
+import let2 from "../../../assets/images/letters/let2.jpg";
+import let3 from "../../../assets/images/letters/let3.jpg";
+import let4 from "../../../assets/images/letters/let4.jpg";
+import let5 from "../../../assets/images/letters/let5.jpg";
+
 function Main() {
   let location = useLocation();
   const LOGOS = [
@@ -59,6 +66,8 @@ function Main() {
     cer2,
   ];
 
+  const LETTERS = [let1, let2, let3, let4, let5];
+
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -80,17 +89,29 @@ function Main() {
         <Callback id="callback" />
       </div>
       <Slider
-        firstTitle={"Клиенты и партнеры"}
+        modalExist={false}
+        id="ourClients"
+        firstTitle={"Клиенты и партнёры"}
         pics={LOGOS}
         className="our-clients"
         mobileTranslate={80}
         mobileCountCenter={3}
       />
       <Slider
+        modalExist={true}
         id="certificates"
         firstTitle={"Лицензии"}
         pics={CERTIFICATES}
         className="certificates"
+        mobileTranslate={220}
+        mobileCountCenter={1}
+      />
+      <Slider
+        modalExist={true}
+        id="letters"
+        firstTitle={"Благодарственные письма"}
+        pics={LETTERS}
+        className="letters"
         mobileTranslate={220}
         mobileCountCenter={1}
       />
